@@ -2,43 +2,108 @@
 <html lang="en">
 
 <head>
-    <title>Fabian Tauriello</title>
-    <link rel="stylesheet" href="../css/main.css">
+        <title>Fabian Tauriello</title>
+        <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+                integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+                crossorigin="anonymous">
+        <link rel="stylesheet" href="../css/main.css">
 </head>
 
 <body>
-    <!-- {% include header.html %} -->
-    <!-- {{ content }} -->
+        <!-- {% include header.html %} -->
+        <!-- {{ content }} -->
 
-    <!-- NAV BAR -->
-    <nav class="navbar navbar-default">
-            <a class="navbar-brand" href="#">
-                <img src="logo.png" width="30" height="30" alt="logo">
-            </a>
-            <ul class="nav">
-                <li class="nav-item active">
-                        <a class="nav-link active" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
-                </li>
-                <li class="nav-item">
-                        <a class="nav-link" href="#">Projects</a>
-                </li>
-                <li class="nav-item">
-                        <a class="nav-link" href="#">Blog</a>
-                </li>
-                <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
-                </li>
-            </ul>
-    </nav>
-    <!-- NAV BAR END -->
+        <header>
+                <div class="backgroundPic">
+                        <div class="welcomeGreeting">
+                                <h1>G'day</h1>
+                                <p>sub title</p>
+                        </div>
+                </div>
 
+                <!-- NAV BAR -->
+                <nav class="navbar navbar-default">
+                        <a class="navbar-brand" href="#">
+                                <img src="../images/logo.png" width="30" height="30" alt="logo">
+                        </a>
+                        <ul class="nav">
+                                <li class="nav-item active">
+                                        <a class="nav-link active" href="#">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                        <a class="nav-link" href="#about">About</a>
+                                </li>
+                                <li class="nav-item">
+                                        <a class="nav-link" href="#projects">Projects</a>
+                                </li>
+                                <li class="nav-item">
+                                        <a class="nav-link" href="#blog">Blog</a>
+                                </li>
+                                <li class="nav-item">
+                                        <a class="nav-link" href="#contact">Contact</a>
+                                </li>
+                        </ul>
+                </nav>
+                <!-- NAV BAR END -->
+        </header>
+
+        <!-- MAIN AREA -->
+        <main>
+
+                <!-- ABOUT SECTION -->
+                <section id="about">
+                        <h2>About</h2>
+                </section>
+                <!-- ABOUT SECTION END -->
+
+                <!-- PROJECTS SECTION -->
+                <section id="projects">
+                        <h2>Projects</h2>
+                </section>
+                <!-- PROJECTS SECTION END -->
+
+                <!-- BLOG SECTION -->
+                <section id="blog">
+                        <h2>Blog</h2>
+                </section>
+                <!-- BLOG SECTION END -->
+
+                <!-- CONTACT SECTION -->
+                <section id="contact">
+                        <div class="container">
+                                <h2>Contact</h2>
+                                <p>Get in touch</p>
+                                <form>
+                                        <div class="form-group">
+                                                <input type="text" class="form-control" id="nameInput"
+                                                        placeholder="Name">
+                                        </div>
+                                        <div class="form-group">
+                                                <input type="email" class="form-control" id="emailInput"
+                                                        placeholder="Enter email">
+                                        </div>
+                                        <div class="form-group">
+                                                <textarea class="form-control" id="textAreaInput"
+                                                        placeholder="Your comment" rows="3"></textarea>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                </form>
+                        </div>
+                </section>
+                <!-- CONTACT SECTION END -->
+
+        </main>
+        <!-- MAIN AREA END -->
+
+        <!-- FOOTER SECTION -->
+        <footer id="footer">
+
+        </footer>
+        <!-- FOOTER SECTION END -->
 
 </body>
 

@@ -1,0 +1,46 @@
+section {
+    height: 100vh;
+}
+
+h1 {
+    font-size: 130px;
+}
+
+.welcomeGreeting {
+    /* background-color: blue; */
+    margin: auto;
+    color: rgb(218, 213, 213);
+    font-family: 'Lobster', cursive;
+    font-style: italic;
+}
+
+.backgroundPic {
+    background-image: url(../images/art-big-data-bright-158826.jpg);
+    background-size: cover;
+    /* opacity: 0.6; */
+    width: auto;
+    height: 100vh;
+    display: flex;
+}
+
+#about {
+    background-color: blue;
+}
+
+#projects {
+    background-color: red;
+}
+
+#blog {
+    background-color: green;
+}
+
+#contact {
+    background-color: orange;
+}
+
+#footer {
+    height: 100px;
+    background-color: yellow;
+    
+}
