@@ -3,10 +3,11 @@
 
 <head>
         <title>Fabian Tauriello</title>
-        <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+        <!-- fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Lobster|Archivo|Cardo|Cormorant|Fira+Sans|Fjalla+One|Frank+Ruhl+Libre|Karla|Lora|Montserrat|Playfair+Display|Playfair+Display+SC|Roboto|Rubik|Spectral|Spectral+SC|Ubuntu"
+                rel="stylesheet">
 
-
-        <!-- Bootstrap CSS -->
+        <!-- CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
                 integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
                 crossorigin="anonymous">
@@ -17,16 +18,18 @@
         <!-- {% include header.html %} -->
         <!-- {{ content }} -->
 
+
+
         <header>
                 <div class="backgroundPic">
                         <div class="welcomeGreeting">
                                 <h1>G'day</h1>
-                                <p>sub title</p>
+                                <p>Thanks for stopping by</p>
                         </div>
                 </div>
 
                 <!-- NAV BAR -->
-                <nav class="navbar navbar-default">
+                <nav id="navbar" class="navbar navbar-light">
                         <a class="navbar-brand" href="#">
                                 <img src="../images/logo.png" width="30" height="30" alt="logo">
                         </a>
@@ -55,44 +58,88 @@
         <main>
 
                 <!-- ABOUT SECTION -->
-                <section id="about">
-                        <h2>About</h2>
+                <section id="about" class="section-parent">
+                        <div class="section-header flex-center-column">
+                                <h2>About</h2>
+                                <hr>
+                        </div>
+                        <div class="section-content about-grid-container">
+                                <div class="profile-pic-area"></div>
+                                <div class="profile-text-area"></div>
+                        </div>
                 </section>
                 <!-- ABOUT SECTION END -->
 
                 <!-- PROJECTS SECTION -->
-                <section id="projects">
-                        <h2>Projects</h2>
+                <section id="projects" class="section-parent">
+                        <div class="section-header flex-center-column">
+                                <h2>Projects</h2>
+                                <hr>
+                        </div>
+                        <!-- add projects-grid-container here when i have projects. the class may need some work. -->
+                        <div class="section-content">
+                                <h3>Coming Soon</h3>
+                        </div>
                 </section>
                 <!-- PROJECTS SECTION END -->
 
                 <!-- BLOG SECTION -->
-                <section id="blog">
-                        <h2>Blog</h2>
+                <section id="blog" class="section-parent">
+                        <div class="section-header flex-center-column">
+                                <h2>Blog</h2>
+                                <hr>
+                        </div>
+                        <div class="section-content flex-center-row">
+
+                                <!-- BOOTSTRAP CARD LAYOUT -->
+                                <!-- {% for post in site.posts limit: 4 %}
+                                <div class="card">
+                                        <img class="card-img-top" src="../images/download.svg" alt="Blog post image">
+                                        <div class="card-body">
+                                                <h5 class="card-title">{{ post.title }}</h5>
+                                                <p class="card-text">some text here</p>
+                                                <a href="{{ post.url }}" class="btn btn-primary">Read more</a>
+                                        </div>
+                                </div>
+                                {% endfor %} -->
+
+                                <!-- MY BOX LAYOUT -->
+                                {% for post in site.posts limit: 4 %}
+                                <div class="box">
+                                        <img src="../images/download.svg" alt="Blog post image">
+                                        <a href="{{ post.url }}">
+                                                <h5>{{ post.title }}</h5>
+                                        </a>
+                                        <p>{{ post.excerpt }}</p>
+                                </div>
+                                {% endfor %}
+
+                        </div>
                 </section>
                 <!-- BLOG SECTION END -->
 
                 <!-- CONTACT SECTION -->
-                <section id="contact" class="flex-container-column">
-                        <div class="section-header">
+                <section id="contact" class="section-parent">
+                        <div class="section-header flex-center-column">
                                 <h2>Contact</h2>
-                                <p>Get in touch</p>
+                                <!-- <p>Get in touch</p> -->
+                                <hr>
                         </div>
-                        <div class="section-content">
-                                <form>
+                        <div class="section-content flex-center-column">
+                                <form action="https://formspree.io/ftauriello@hotmail.com" method="POST">
                                         <div class="form-group">
-                                                <input type="text" class="form-control" id="nameInput"
+                                                <input type="text" name="name" class="form-control" id="nameInput"
                                                         placeholder="Name">
                                         </div>
                                         <div class="form-group">
-                                                <input type="email" class="form-control" id="emailInput"
+                                                <input type="email" name="email" class="form-control" id="emailInput"
                                                         placeholder="Enter email">
                                         </div>
                                         <div class="form-group">
-                                                <textarea class="form-control" id="textAreaInput"
-                                                        placeholder="Your comment" rows="3"></textarea>
+                                                <textarea class="form-control" name="comment" id="textAreaInput"
+                                                        placeholder="Your comment" rows="5"></textarea>
                                         </div>
-                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                        <button type="submit" value="send" class="btn btn-primary">Submit</button>
                                 </form>
                         </div>
                 </section>
@@ -107,6 +154,7 @@
         </footer>
         <!-- FOOTER SECTION END -->
 
+<script src="../js/main.js"></script>
 </body>
 
 </html>

@@ -1,52 +1,124 @@
 section {
-    height: 100vh;
+    /* height: 100vh; */
+}
+
+/* keeps the side scroll disabled. */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 h1 {
     font-size: 130px;
 }
 
+h2 {
+    /* background-color: blue; */
+    font-size: 6rem;
+    /* width: 100%;
+    height: 100%; */
+}
+
+h3 {
+    text-align: center;
+}
+
+h5 {
+    margin-top: 11px;
+    margin-bottom: 0px;
+}
+
+p {
+    text-align: justify;
+}
+
+hr {
+    display: block;
+    width: 40%;
+    background-color: black;
+    height: 4px;
+}
+
 textarea {
     resize: none;
 }
 
-.flex-container-column {
+form {
+    width: 50%;
+    /* margin: 0; */
+    margin-bottom: 0px;
+    /* background-color: yellow; */
+}
+
+footer {
+    height: 100px;
+    background-color: #001011;
+}
+
+@media(min-width:768px) {
+    .box {
+        padding: 15px;
+        background-color: #093A3E;
+        height: 80%;
+        flex: 0.2;
+        color: #E0E0CE;
+        box-shadow: 5px 5px 6px #888888;
+        border-radius: 10px;
+    }
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    right: 0;
+    left: 0;
+}
+
+.projects-grid-container {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+
+.about-grid-container {
+    display: grid;
+    margin-left: 15%;
+    margin-right: 15%;
+    width: 70%;
+    grid-template-columns: 25% 45%;
+}
+
+.flex-center-column {
     display: flex;
-    /* align-items: center; */
-    /* align-content: space-around; */
-    /* justify-content: center;  */
     flex-direction: column;
-    /* position: relative; */
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-center-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.section-parent {
+    position: relative;
 }
 
 .section-header {
-    flex: 1.3;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    /* width: 50%; */
-    /* background-color: blue; */
-    /* position: absolute; */
-    /* top: 10%; */
+    position: absolute;
+    height: 30%;
+    width: 100%;
+    top: 0px;
+    /* background-color: red; */
 }
 
 .section-content {
-    flex: 3;
-    /* width: 50%; */
-    /* background-color: red; */
-    /* position: absolute; */
-}
-
-form {
-    width: 50%;
-    margin-left: 25%;
-    height: 50%;
-    background-color: yellow;
-}
-
-.section-header>h2 {
-    font-size: 6em;
+    position: absolute;
+    height: 70%;
+    width: 100%;
+    bottom: 0px;
 }
 
 .section-header>p {
@@ -57,12 +129,12 @@ form {
     /* background-color: blue; */
     margin: auto;
     color: rgb(218, 213, 213);
-    font-family: 'Lobster', cursive;
-    font-style: italic;
+    font-family: 'Montserrat';
+    /* font-style: italic; */
 }
 
 .backgroundPic {
-    background-image: url(../images/art-big-data-bright-158826.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/lobostudio-hamburg-359753-unsplash.jpg);
     background-size: cover;
     /* opacity: 0.6; */
     width: auto;
@@ -71,22 +143,23 @@ form {
 }
 
 #about {
-    background-color: blue;
+    background-color: #E6C79C;
 }
 
 #projects {
-    background-color: red;
+    background-color: #E0E0CE;
 }
 
 #blog {
-    background-color: green;
+    background-color: #E6C79C;
 }
 
 #contact {
-    background-color: orange;
+    background-color: #E0E0CE;
 }
 
-#footer {
-    height: 100px;
-    background-color: yellow;
+#footer {}
+
+#navbar {
+    
 }

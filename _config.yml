@@ -27,6 +27,8 @@ github_username:  jekyll
 # Build settings
 markdown: kramdown
 theme: minima
+future: true
+excerpt_separator: <!--more-->
 plugins:
   - jekyll-feed
 
