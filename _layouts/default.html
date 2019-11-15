@@ -3,93 +3,147 @@
 
 <head>
         <title>Fabian Tauriello</title>
-        <!-- fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Lobster|Archivo|Cardo|Cormorant|Fira+Sans|Fjalla+One|Frank+Ruhl+Libre|Karla|Lora|Montserrat|Playfair+Display|Playfair+Display+SC|Roboto|Rubik|Spectral|Spectral+SC|Ubuntu"
-                rel="stylesheet">
-
-        <!-- CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
                 integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
                 crossorigin="anonymous">
+        <link rel="stylesheet"
+                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet"
+                href="https://fonts.googleapis.com/css?family=Lobster|Archivo|Cardo|Cormorant|Fira+Sans|Fjalla+One|Frank+Ruhl+Libre|Karla|Lora|Montserrat|Playfair+Display|Playfair+Display+SC|Roboto|Rubik|Spectral|Spectral+SC|Ubuntu">
         <link rel="stylesheet" href="../css/main.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 </head>
 
 <body>
-        <!-- {% include header.html %} -->
-        <!-- {{ content }} -->
-
-
 
         <header>
-                <div class="backgroundPic">
-                        <div class="welcomeGreeting">
+                <div class="backgroundPic container-fluid">
+                        <div>
                                 <h1>G'day</h1>
                                 <p>Thanks for stopping by</p>
                         </div>
                 </div>
-
                 <!-- NAV BAR -->
-                <nav id="navbar" class="navbar navbar-light">
+                <nav id="navbar" class="navbar navbar-expand-md navbar-dark bg-dark">
                         <a class="navbar-brand" href="#">
                                 <img src="../images/logo.png" width="30" height="30" alt="logo">
                         </a>
-                        <ul class="nav">
-                                <li class="nav-item active">
-                                        <a class="nav-link active" href="#">Home</a>
-                                </li>
-                                <li class="nav-item">
-                                        <a class="nav-link" href="#about">About</a>
-                                </li>
-                                <li class="nav-item">
-                                        <a class="nav-link" href="#projects">Projects</a>
-                                </li>
-                                <li class="nav-item">
-                                        <a class="nav-link" href="#blog">Blog</a>
-                                </li>
-                                <li class="nav-item">
-                                        <a class="nav-link" href="#contact">Contact</a>
-                                </li>
-                        </ul>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav ml-auto">
+                                        <li class="nav-item active">
+                                                <a class="nav-link active" href="#">Home</a>
+                                        </li>
+                                        <li class="nav-item">
+                                                <a id="aboutLink" class="nav-link" href="#about-anchor">About</a>
+                                        </li>
+                                        <li class="nav-item">
+                                                <a class="nav-link" href="#projects-anchor">Projects</a>
+                                        </li>
+                                        <li class="nav-item">
+                                                <a class="nav-link" href="#blog-anchor">Blog</a>
+                                        </li>
+                                        <li class="nav-item">
+                                                <a class="nav-link" href="#contact-anchor">Contact</a>
+                                        </li>
+                                </ul>
+                        </div>
                 </nav>
                 <!-- NAV BAR END -->
         </header>
 
         <!-- MAIN AREA -->
-        <main>
-
+        <main id="main">
                 <!-- ABOUT SECTION -->
-                <section id="about" class="section-parent">
-                        <div class="section-header flex-center-column">
-                                <h2>About</h2>
-                                <hr>
-                        </div>
-                        <div class="section-content about-grid-container">
-                                <div class="profile-pic-area"></div>
-                                <div class="profile-text-area"></div>
+                <div id="about-anchor"></div>
+                <section class="page-section bg-light" id="about">
+                        <div class="container-fluid">
+                                <h2 class="page-section-heading text-center text-secondary">ABOUT</h2>
+                                <hr style="visibility: hidden;">
+                                <div class="row justify-content-center border">
+                                        <div class="col-xs-6 col-md-2 border">
+                                                <img src="images/profile-pic.png" class="card-img"
+                                                        alt="Profile Picture">
+                                        </div>
+                                        <div id="profile-card" class="col-md-7 card border box-shadow">
+                                                <div class="row no-gutters">
+                                                        <div class="card-body">
+                                                                <p class="card-text text-justify">
+                                                                        I am a motivated and passionate software
+                                                                        developer seeking an opportunity to
+                                                                        progress my career in
+                                                                        London’s dynamic tech industry. During
+                                                                        my studies and
+                                                                        experience working as a
+                                                                        graduate software developer with a
+                                                                        leading Australian
+                                                                        university, I have developed my
+                                                                        technical skills and am now
+                                                                        ready to apply them in a new
+                                                                        innovative workplace. I am excited about
+                                                                        taking on a new career challenge in
+                                                                        London.
+                                                                </p>
+                                                                <a class="btn btn-xl btn-outline-dark"
+                                                                        href="docs/Curriculum Vitae.pdf" download>
+                                                                        Download my CV
+                                                                </a>
+                                                                <span class="fa-stack fa-lg">
+                                                                        <a href="#"
+                                                                                class="fa fa-circle fa-stack-2x icon-background"></a>
+                                                                        <a href="#"
+                                                                                class="fa fa-linkedin fa-stack-1x"></a>
+                                                                </span>
+                                                                <span class="fa-stack fa-lg">
+                                                                        <a href="#"
+                                                                                class="fa fa-circle fa-stack-2x icon-background"></a>
+                                                                        <a hred="#"
+                                                                                class="fa fa-github fa-stack-1x"></a>
+                                                                </span>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div id="bio-details" class="row justify-content-center">
+                                        <div class="col-md-9">
+                                                <ul class="list-group list-group-horizontal-md">
+                                                        <li class="list-group-item">Software Developer</li>
+                                                        <li class="list-group-item">London, UK</li>
+                                                        <li class="list-group-item">ftauriello@hotmail.com</li>
+                                                        <li class="list-group-item">07572093185</li>
+                                                </ul>
+                                        </div>
+                                </div>
                         </div>
                 </section>
                 <!-- ABOUT SECTION END -->
 
                 <!-- PROJECTS SECTION -->
-                <section id="projects" class="section-parent">
-                        <div class="section-header flex-center-column">
-                                <h2>Projects</h2>
+                <div id="projects-anchor"></div>
+                <section class="page-section" id="projects">
+                        <div class="container-fluid">
+                                <h2 class="page-section-heading text-center text-secondary">PROJECTS</h2>
                                 <hr>
-                        </div>
-                        <!-- add projects-grid-container here when i have projects. the class may need some work. -->
-                        <div class="section-content">
-                                <h3>Coming Soon</h3>
+                                <div class="row">
+                                        Coming soon
+                                </div>
                         </div>
                 </section>
                 <!-- PROJECTS SECTION END -->
 
                 <!-- BLOG SECTION -->
-                <section id="blog" class="section-parent">
-                        <div class="section-header flex-center-column">
+                <div id="blog-anchor"></div>
+                <section id="blog" class="container-fluid bg-light">
+                        <div class="row">
                                 <h2>Blog</h2>
                                 <hr>
                         </div>
-                        <div class="section-content flex-center-row">
+                        <div class="row">
 
                                 <!-- BOOTSTRAP CARD LAYOUT -->
                                 <!-- {% for post in site.posts limit: 4 %}
@@ -105,7 +159,7 @@
 
                                 <!-- MY BOX LAYOUT -->
                                 {% for post in site.posts limit: 4 %}
-                                <div class="box">
+                                <div>
                                         <img src="../images/download.svg" alt="Blog post image">
                                         <a href="{{ post.url }}">
                                                 <h5>{{ post.title }}</h5>
@@ -119,13 +173,14 @@
                 <!-- BLOG SECTION END -->
 
                 <!-- CONTACT SECTION -->
-                <section id="contact" class="section-parent">
-                        <div class="section-header flex-center-column">
+                <div id="contact-anchor"></div>
+                <section id="contact" class="container-fluid">
+                        <div class="row">
                                 <h2>Contact</h2>
                                 <!-- <p>Get in touch</p> -->
                                 <hr>
                         </div>
-                        <div class="section-content flex-center-column">
+                        <div class="row">
                                 <form action="https://formspree.io/ftauriello@hotmail.com" method="POST">
                                         <div class="form-group">
                                                 <input type="text" name="name" class="form-control" id="nameInput"
@@ -137,7 +192,7 @@
                                         </div>
                                         <div class="form-group">
                                                 <textarea class="form-control" name="comment" id="textAreaInput"
-                                                        placeholder="Your comment" rows="5"></textarea>
+                                                        placeholder="Your comment"></textarea>
                                         </div>
                                         <button type="submit" value="send" class="btn btn-primary">Submit</button>
                                 </form>
@@ -153,8 +208,16 @@
 
         </footer>
         <!-- FOOTER SECTION END -->
-
-<script src="../js/main.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+                integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+                crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+                integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+                crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+                integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+                crossorigin="anonymous"></script>
+        <script src="../js/main.js"></script>
 </body>
 
 </html>
