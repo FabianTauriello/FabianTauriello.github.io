@@ -3,13 +3,11 @@
 
 <head>
         <title>Fabian Tauriello</title>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-                integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-                crossorigin="anonymous">
         <link rel="stylesheet"
                 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet"
-                href="https://fonts.googleapis.com/css?family=Lobster|Archivo|Cardo|Cormorant|Fira+Sans|Fjalla+One|Frank+Ruhl+Libre|Karla|Lora|Montserrat|Playfair+Display|Playfair+Display+SC|Roboto|Rubik|Spectral|Spectral+SC|Ubuntu">
+                href="https://fonts.googleapis.com/css?family=Lobster|Archivo|Cardo|Cormorant|Fira+Sans|Fjalla+One|Frank+Ruhl+Libre|Karla|Bebas+Neue|Lora|Montserrat|Playfair+Display|Playfair+Display+SC|Roboto|Rubik|Spectral|Spectral+SC|Ubuntu">
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="../css/main.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -18,43 +16,20 @@
 <body>
 
         <header>
-                <div class="backgroundPic container-fluid">
-                        <div>
-                                <h1>G'day</h1>
-                                <p>Thanks for stopping by</p>
+                <div id="background-pic">
+                        <div id="background-pic-caption-container">
+                                <span>G'day</span><br>
+                                <span>Thanks for stopping by</span>
                         </div>
                 </div>
                 <!-- NAV BAR -->
-                <nav id="navbar" class="navbar navbar-expand-md navbar-dark bg-dark">
-                        <a class="navbar-brand" href="#">
-                                <img src="../images/logo.png" width="30" height="30" alt="logo">
-                        </a>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse"
-                                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                                aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                                <ul class="navbar-nav ml-auto">
-                                        <li class="nav-item active">
-                                                <a class="nav-link active" href="#">Home</a>
-                                        </li>
-                                        <li class="nav-item">
-                                                <a id="aboutLink" class="nav-link" href="#about-anchor">About</a>
-                                        </li>
-                                        <li class="nav-item">
-                                                <a class="nav-link" href="#projects-anchor">Projects</a>
-                                        </li>
-                                        <li class="nav-item">
-                                                <a class="nav-link" href="#blog-anchor">Blog</a>
-                                        </li>
-                                        <li class="nav-item">
-                                                <a class="nav-link" href="#contact-anchor">Contact</a>
-                                        </li>
-                                </ul>
-                        </div>
-                </nav>
-
+                <ul id="navbar" class="m-0 p-0">
+                        <li><a href="#contact-anchor">Contact</a></li>
+                        <li><a href="#blog-anchor">Blog</a></li>
+                        <li><a href="#projects-anchor">Projects</a></li>
+                        <li><a href="#about-anchor">About</a></li>
+                        <li><a class="active-nav-link" href="#">Home</a></li>
+                </ul>
                 <!-- NAV BAR END -->
         </header>
 
@@ -64,15 +39,15 @@
                 <div id="about-anchor"></div>
                 <section class="page-section bg-light" id="about">
                         <div class="container-fluid">
-                                <h2 class="page-section-heading text-center text-secondary">ABOUT</h2>
-                                <hr style="visibility: hidden;">
-                                <div class="row justify-content-center">
-                                        <div id="profile-pic-container" class="col-md-auto p-0">
-                                                        <img id="me" src="images/profile-pic.png" class="img-fluid"
+                                <h1 class="page-section-heading text-center">ABOUT</h1>
+                                <hr>
+                                <div class="justify-content-center">
+                                        <div id="profile-pic-container" class="p-0">
+                                                <img id="me" src="images/profile-pic.png" class="img-fluid"
                                                         alt="Profile Picture">
                                         </div>
-                                        <div id="profile-card" class="col-md-6 card">
-                                                <div class="row no-gutters">
+                                        <div id="profile-card" class="">
+                                                <div class="">
                                                         <div class="card-body">
                                                                 <p class="card-text text-justify">
                                                                         I am a motivated and passionate software
@@ -110,15 +85,15 @@
                                                 </div>
                                         </div>
                                 </div>
-                                <div id="bio-details" class="row justify-content-center">
-                                        <div class="col-md-9">
-                                                <ul class="list-group list-group-horizontal-md">
-                                                        <li class="list-group-item">Software Developer</li>
-                                                        <li class="list-group-item">London, UK</li>
-                                                        <li class="list-group-item">ftauriello@hotmail.com</li>
-                                                        <li class="list-group-item">07572093185</li>
-                                                </ul>
-                                        </div>
+                                <div id="bio-details" class="justify-content-center">
+                                        <ul class="list-group list-group-horizontal colap">
+                                                <li class="list-group-item text-center">Software Developer</li>
+                                                <li class="list-group-item text-center">London, UK</li>
+                                                <li class="list-group-item text-center">ftauriello@hotmail.com
+                                                </li>
+                                                <li class="list-group-item text-center">07572093185</li>
+                                        </ul>
+
                                 </div>
                         </div>
                 </section>
@@ -126,12 +101,12 @@
 
                 <!-- PROJECTS SECTION -->
                 <div id="projects-anchor"></div>
-                <section class="page-section" id="projects">
-                        <div class="container-fluid">
-                                <h2 class="page-section-heading text-center text-secondary">PROJECTS</h2>
+                <section class="page-section border" id="projects">
+                        <div class="container-fluid border">
+                                <h1 class="page-section-heading text-center">PROJECTS</h1>
                                 <hr>
-                                <div class="row">
-                                        Coming soon
+                                <div class="align-items-center border">
+                                        <h3 class="border">Coming Soon...</h3>
                                 </div>
                         </div>
                 </section>
@@ -140,11 +115,11 @@
                 <!-- BLOG SECTION -->
                 <div id="blog-anchor"></div>
                 <section id="blog" class="container-fluid bg-light">
-                        <div class="row">
+                        <div class="">
                                 <h2>Blog</h2>
                                 <hr>
                         </div>
-                        <div class="row">
+                        <div class="">
 
                                 <!-- BOOTSTRAP CARD LAYOUT -->
                                 <!-- {% for post in site.posts limit: 4 %}
@@ -176,12 +151,12 @@
                 <!-- CONTACT SECTION -->
                 <div id="contact-anchor"></div>
                 <section id="contact" class="container-fluid">
-                        <div class="row">
+                        <div class="">
                                 <h2>Contact</h2>
                                 <!-- <p>Get in touch</p> -->
                                 <hr>
                         </div>
-                        <div class="row">
+                        <div class="">
                                 <form action="https://formspree.io/ftauriello@hotmail.com" method="POST">
                                         <div class="form-group">
                                                 <input type="text" name="name" class="form-control" id="nameInput"

@@ -1,144 +1,96 @@
 /* CLASS SELECTORS */
 
-.backgroundPic {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/lobostudio-hamburg-359753-unsplash.jpg);
-    background-size: cover;
-    width: auto;
-    height: 100vh;
+.active-nav-link {
+    background-color: #4CAF50;
 }
 
-.profile-description {
-    padding: 20px;
+.d-in {
+    display: inline;
+}
+
+.icon-background {
+    color: red;
+}
+
+.m-0 {
+    margin: 0;
 }
 
 .p-0 {
     padding: 0;
 }
 
-.h-100 {
-    height: 100%;
-}
-
-.mt-auto {
-    margin-top: auto;
-}
-
-.mb-auto {
-    margin-bottom: auto;
-}
-
-.mr-auto {
-    margin-right: auto;
-}
-
-.ml-auto {
-    margin-left: auto;
-}
-
-.m-auto {
-    margin: auto;
-}
-
-.box {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.card-img {
-    width: 150px;
-}
-
-.box-shadow {
-    box-shadow: 5px 10px 10px;
-}
-
-.page-section {
-    padding: 6rem 0;
-}
+.page-section {}
 
 .page-section-heading {
     font-size: 3.25rem;
     line-height: 2rem;
 }
 
-.m {
-    margin: 0;
-}
-
-.mb-0 {
-    margin-bottom: 0 !important;
-}
-
-.ml-0 {
-    margin-left: 0px;
+.profile-description {
+    padding: 20px;
 }
 
 .text-center {
     text-align: center;
 }
 
-.text-justify {
-    text-align: justify;
-}
-
-
-
-.icon-background {
-    color: red;
-}
-
 /* ELEMENT SELECTORS */
 
-main {
-    padding-top: 500px;
+body {
+    margin: 0px;
+}
+
+h1 {
+    font-family: 'Ubuntu', sans-serif;
 }
 
 hr {
-    border: 3px solid black;
-    border-radius: 5px;
-    width: 35%;
+    border: 1.5px solid black;
+    width: 25%;
 }
 
 html {
     scroll-behavior: smooth;
-    max-width: 100%;
-    overflow-x: hidden;
-}
-
-body {
-    max-width: 100%;
+    height: 100%;
     overflow-x: hidden;
 }
 
 section {
-    min-height: 90vh;
-    padding: 8rem 0;
+    /* min-height: 90vh; */
+    /* padding: 8rem 0; */
 }
 
 /* ID SELECTORS */
-
-#profile-card {
-    /* background-color: #3A1818; */
-    margin-left: 10px;
-}
-
-#me {
-    max-width: 200px;
-    border-radius: 10px;
-}
-
-#navbar {
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-}
 
 #about {
     /* background-color: #EFACAC; */
 }
 
-#projects {
-    /* background-color: red; */
+#about-anchor, #projects-anchor, #blog-anchor, #contact-anchor {
+    visibility: hidden;
+    display: block;
+    position: relative;
+}
+
+#background-pic {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/lobostudio-hamburg-359753-unsplash.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+#background-pic-caption-container {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+}
+
+#bio-details {
+    margin-top: 10px;
+    width: 65%;
 }
 
 #blog {
@@ -149,11 +101,25 @@ section {
     /* background-color: red; */
 }
 
-#about-anchor, #projects-anchor, #blog-anchor, #contact-anchor {
-    visibility: hidden;
-    display: block;
-    position: relative;
-    top: -10vh;
+#me {
+    max-width: 200px;
+    border-radius: 10px;
+}
+
+#navbar {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    list-style-type: none;
+    overflow: hidden;
+    background-color: #333;
+
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 20px
+}
+
+#profile-card {
+    /* background-color: #3A1818; */
+    /* margin-left: 10px; */
 }
 
 #profile-description {}
@@ -164,7 +130,9 @@ section {
     text-align: center;
 }
 
-#bio-details {}
+#projects {
+    /* background-color: red; */
+}
 
 /* OTHER SELECTORS */
 
@@ -172,9 +140,50 @@ section {
     opacity: 0.5;
 }
 
-@media (max-width: 600px) {
-    #profile-card {
-        margin-top: 20px;
-        margin-right: 10px;
-    }
+#navbar a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+#navbar a:hover {
+    background-color: #111;
+}
+
+#navbar li {
+    float: right;
+}
+
+/* MEDIA QUERIES * /
+
+@media (max-width: 600px) {}
+
+@media (max-width: 768px) {}
+
+@media (min-width:320px) {
+    /* smartphones, iPhone, portrait 480x320 phones */
+
+}
+
+@media (min-width:481px) {
+    /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+}
+
+@media (min-width:641px) {
+    /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+}
+
+@media (min-width:961px) {
+    /* tablet, landscape iPad, lo-res laptops ands desktops */
+}
+
+@media (min-width:1025px) {
+    /* big landscape tablets, laptops, and desktops */
+}
+
+@media (min-width:1281px) {
+    /* hi-res laptops and desktops */
 }
