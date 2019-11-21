@@ -229,8 +229,8 @@ ul {
     margin-right: auto;
     padding: 0;
 
-    display: flex;
-    flex-wrap: wrap;
+    /* display: flex; */
+    /* flex-wrap: wrap; */
 }
 
 #profile-description {
@@ -238,7 +238,7 @@ ul {
 }
 
 #about-para-flex-container {
-    padding: 15px;
+    /* padding: 15px; */
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -255,8 +255,13 @@ ul {
 
 #about-img {
     /* border-radius: 10px 0 0 10px;*/
-    width: 200px;
+    min-width: 200px;
     /* float: left; */
+}
+
+#about-card {
+    max-width: 70%;
+    margin: auto;
 }
 
 #about-para-buttons {
