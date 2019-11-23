@@ -20,10 +20,10 @@
 
         <header>
                 <!-- BACKGROUND PIC -->
-                <div id="background-pic">
+                <div id="background-pic-container">
                         <div id="background-pic-caption-container">
-                                <span>G'day</span><br>
-                                <span>Thanks for stopping by</span>
+                                <span class="">G'DAY :)</span><br>
+                                <span class="">THANKS FOR STOPPING BY</span>
                         </div>
                 </div>
                 <!-- BACKGROUND PIC END -->
@@ -32,7 +32,7 @@
         <!-- MAIN AREA -->
         <main id="main">
                 <!-- NAV BAR -->
-                <ul id="navbar" class="m-0 p-0">
+                <ul id="navbar" class="">
                         <li><a href="#contact-anchor">Contact</a></li>
                         <li><a href="#blog-anchor">Blog</a></li>
                         <li><a href="#projects-anchor">Projects</a></li>
@@ -43,17 +43,18 @@
 
                 <!-- ABOUT SECTION -->
                 <div id="about-anchor"></div>
-                <section id="about">
-                        <h1 class="page-section-heading text-center">ABOUT</h1>
-                        <hr class="section-hr">
-                        <div id="about-card" class="card bg-light mb-3">
-                                <div class="row no-gutters">
-                                        <img id="about-img" src="images/profile-pic.png" class="col-md-3 card-img"
-                                                alt="profile picture">
-                                        <div class="col-md-9">
-                                                <div class="card-body border">
-                                                        <h5 class="card-title">Hi! My name is Fabian</h5>
-                                                        <p class="card-text"> I am a motivated and passionate software
+                <section id="about" class="">
+                        <h1 class="page-section-heading blk">ABOUT</h1>
+                        <hr class="section-hr blk">
+                        <div id="about-main-content-container" class="">
+                                <div id="about-first-flex-container" class="blk">
+                                        <img id="about-img" src="images/profile-pic.png" class="" alt="Profile Picture">
+                                        <div id="about-para-flex-container" class="light-blue">
+                                                <div id="about-para-text" class="">
+                                                        <h3>Hi! My name is Fabian</h3>
+                                                        <br>
+                                                        <p id="profile-description" class="">
+                                                                I am a motivated and passionate software
                                                                 developer seeking an opportunity to
                                                                 progress my career in
                                                                 London’s dynamic tech industry. During
@@ -66,104 +67,32 @@
                                                                 ready to apply them in a new
                                                                 innovative workplace. I am excited about
                                                                 taking on a new career challenge in
-                                                                London.</p>
-                                                        <div id="about-para-buttons" class="border">
-                                                                <div>
-                                                                        <a id="download-CV-button"
-                                                                                class="btn btn-primary"
-                                                                                href="docs/Curriculum Vitae.pdf"
-                                                                                download>
-                                                                                Download CV
-                                                                        </a>
-                                                                </div>
-                                                                <div>
-                                                                        <span id="linked-in-button"
-                                                                                class="fa-stack fa-lg">
-                                                                                <a href="#"
-                                                                                        class="fa fa-circle fa-stack-2x icon-background"></a>
-                                                                                <a href="#"
-                                                                                        class="fa fa-linkedin fa-stack-1x"></a>
-                                                                        </span>
-                                                                        <span id="github-button" class="fa-stack fa-lg">
-                                                                                <a href="#"
-                                                                                        class="fa fa-circle fa-stack-2x icon-background"></a>
-                                                                                <a hred="#"
-                                                                                        class="fa fa-github fa-stack-1x"></a>
-                                                                        </span>
-                                                                </div>
-                                                        </div>
+                                                                London.
+                                                        </p>
                                                 </div>
+                                                <a id="download-CV-button" class="primary-button"
+                                                        href="docs/Curriculum Vitae.pdf" download>
+                                                        Download CV
+                                                </a>
                                         </div>
                                 </div>
+                                <ul id="about-second-flex-container" class="light-blue">
+                                        <li class="text-center">Software Developer</li>
+                                        <li class="text-center">London, UK</li>
+                                        <li class="text-center">ftauriello@hotmail.com</li>
+                                        <li class="text-center">07572093185</li>
+                                </ul>
                         </div>
-
-
-
-                        <!-- <div id="about-first-flex-container" class="border">
-                                <img id="about-img" src="images/profile-pic.png" class="" alt="Profile Picture">
-                                <div id="about-para-flex-container" class="border">
-                                        <div id="about-para-text" class="border">
-                                                <h3>Hi! My name is Fabian</h3>
-                                                <br>
-                                                <p id="profile-description" class="">
-                                                        I am a motivated and passionate software
-                                                        developer seeking an opportunity to
-                                                        progress my career in
-                                                        London’s dynamic tech industry. During
-                                                        my studies and
-                                                        experience working as a
-                                                        graduate software developer with a
-                                                        leading Australian
-                                                        university, I have developed my
-                                                        technical skills and am now
-                                                        ready to apply them in a new
-                                                        innovative workplace. I am excited about
-                                                        taking on a new career challenge in
-                                                        London.
-                                                </p>
-                                        </div>
-                                        <div id="about-para-buttons" class="border">
-                                                <div>
-                                                        <a id="download-CV-button" class="primary-button"
-                                                                href="docs/Curriculum Vitae.pdf" download>
-                                                                Download CV
-                                                        </a>
-                                                </div>
-                                                <div>
-                                                        <span id="linked-in-button" class="fa-stack fa-lg">
-                                                                <a href="#"
-                                                                        class="fa fa-circle fa-stack-2x icon-background"></a>
-                                                                <a href="#" class="fa fa-linkedin fa-stack-1x"></a>
-                                                        </span>
-                                                        <span id="github-button" class="fa-stack fa-lg">
-                                                                <a href="#"
-                                                                        class="fa fa-circle fa-stack-2x icon-background"></a>
-                                                                <a hred="#" class="fa fa-github fa-stack-1x"></a>
-                                                        </span>
-                                                </div>
-                                        </div>
-                                </div>
-                        </div> -->
-
-
-                        <ul id="about-second-flex-container" class="">
-                                <li class="text-center d-in border">Software Developer</li>
-                                <li class="text-center d-in border">London, UK</li>
-                                <li class="text-center d-in border">ftauriello@hotmail.com</li>
-                                <li class="text-center d-in border">07572093185</li>
-                        </ul>
                 </section>
                 <!-- ABOUT SECTION END -->
 
                 <!-- PROJECTS SECTION -->
                 <div id="projects-anchor"></div>
-                <section class="page-section border" id="projects">
-                        <div class="container-fluid border">
-                                <h1 class="page-section-heading text-center">PROJECTS</h1>
-                                <hr>
-                                <div class="align-items-center border">
-                                        <h3 class="border">Coming Soon...</h3>
-                                </div>
+                <section id="projects" class="">
+                        <h1 class="page-section-heading light-blue">PROJECTS</h1>
+                        <hr class="section-hr light-blue">
+                        <div id="projects-main-content-container" class="light-blue">
+                                <h4 class="light-blue" style="font-style: italic">...Coming Soon</h4>
                         </div>
                 </section>
                 <!-- PROJECTS SECTION END -->
@@ -237,6 +166,17 @@
 
         <!-- FOOTER SECTION -->
         <footer id="footer">
+
+                <!-- <span id="linked-in-button" class="fa-stack fa-lg border">
+                                        <a href="#"
+                                                class="fa fa-circle fa-stack-2x icon-background"></a>
+                                        <a href="#" class="fa fa-linkedin fa-stack-1x"></a>
+                                </span>
+                                <span id="github-button" class="fa-stack fa-lg">
+                                        <a href="#"
+                                                class="fa fa-circle fa-stack-2x icon-background"></a>
+                                        <a hred="#" class="fa fa-github fa-stack-1x"></a>
+                                </span> -->
 
         </footer>
         <!-- FOOTER SECTION END -->

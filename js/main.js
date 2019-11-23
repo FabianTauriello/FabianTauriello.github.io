@@ -28,14 +28,3 @@ function changeActiveNavbarLink() {
     // activate new navbar link
     this.classList.add('active-nav-link');
 }
-
-// function - add the sticky class to the navbar when its scroll position is reached. Remove "sticky" when the scroll position is left.
-// function fixNavBar() {
-//     if (window.pageYOffset > sticky) {
-//         navbar.classList.add('fixed-top');
-//         document.getElementById('main').style.paddingTop = '8vh';
-//     } else {
-//         navbar.classList.remove('fixed-top');
-//         document.getElementById('main').style.paddingTop = '0vh';
-//     }
-// };
