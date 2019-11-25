@@ -207,14 +207,14 @@ li {
 
 .openMobileNavLinks {
     top: 50px !important;
-    transition: 800ms;
-    -webkit-transition: 800ms;
+    transition: 950ms;
+    /* -webkit-transition: 800ms; */
 }
 
 .closeMobileNavLinks {
     top: -50vh !important;
-    transition: 800ms;
-    -webkit-transition: 800ms;
+    transition: 950ms;
+    /* -webkit-transition: 800ms; */
 }
 
 /**************************************************************************************************************************/
