@@ -152,6 +152,7 @@ ul {
     top: 0;
     height: 50px;
     margin-bottom: 0;
+    z-index: 100;
 }
 
 #navLinks a, #navIcon a {
@@ -160,6 +161,7 @@ ul {
     padding: 14px 15px;
     overflow: hidden;
     color: #66FCF1;
+    text-decoration: none;
 }
 
 #navLinks li:hover:not(.active-nav-link) {
@@ -182,18 +184,31 @@ ul {
     width: 100%;
     position: fixed;
     background-color: rgb(34, 35, 43);
-    /* opacity: 0.9; */
-    top: 50px;
-    
+    top: -50vh;
+    z-index: 50;
 }
 
 #mobileNavLinks li {
     flex-grow: 1;
-    /* border: 1px solid whitesmoke; */
     display: flex;
     align-items: center;
     justify-content: center;
-    /* border: 1px solid whitesmoke; */
+    color: #66FCF1;
+}
+
+#mobileNavLinks a {
+    color: #66FCF1;
+    text-decoration: none;
+}
+
+.openMobileNavLinks {
+    top: 50px !important;
+    transition: 500ms;
+}
+
+.closeMobileNavLinks {
+    top: -50vh !important;
+    transition: 500ms;
 }
 
 /**************************************************************************************************************************/

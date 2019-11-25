@@ -7,7 +7,10 @@ for (let i = 0; i < navbarlinks.length; i++) {
 }
 
 const mobileNavLinks = document.getElementById('mobileNavLinks');
+
 const navbar = document.getElementById('navbar');
+
+let mobileMenuIsDisplayed = false;
 
 //-EVENTS AND FUNCTIONS--------------------------------------------------------------------------------------------------------
 
@@ -30,15 +33,17 @@ function changeActiveNavbarLink() {
 }
 
 function openNavLinks() {
-    console.log("clicked");
 
-
-    if(mobileNavLinks.style.visibility == 'hidden') {
-        mobileNavLinks.style.visibility = 'visible';
+    if(!mobileMenuIsDisplayed) {
         navbar.style.boxShadow = 'none';
+        mobileNavLinks.classList.add('openMobileNavLinks');
+        mobileNavLinks.classList.remove('closeMobileNavLinks');
     } else {
-        mobileNavLinks.style.visibility = 'hidden';
         navbar.style.boxShadow = '0 0.5rem 1rem #00000026';
+        mobileNavLinks.classList.add('closeMobileNavLinks');
+        mobileNavLinks.classList.remove('openMobileNavLinks');
     }
+
+    mobileMenuIsDisplayed = !mobileMenuIsDisplayed;
     
 }
