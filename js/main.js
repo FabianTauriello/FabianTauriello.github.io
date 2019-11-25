@@ -32,7 +32,7 @@ function changeActiveNavbarLink() {
     this.classList.add('active-nav-link');
 }
 
-function openNavLinks() {
+function toggleNavLinks() {
 
     if(!mobileMenuIsDisplayed) {
         navbar.style.boxShadow = 'none';
