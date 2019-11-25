@@ -6,6 +6,9 @@ for (let i = 0; i < navbarlinks.length; i++) {
     navbarlinks[i].addEventListener('click', changeActiveNavbarLink);
 }
 
+const mobileNavLinks = document.getElementById('mobileNavLinks');
+const navbar = document.getElementById('navbar');
+
 //-EVENTS AND FUNCTIONS--------------------------------------------------------------------------------------------------------
 
 
@@ -27,16 +30,15 @@ function changeActiveNavbarLink() {
 }
 
 function openNavLinks() {
+    console.log("clicked");
 
-    const mobileNavLinks = document.getElementById('mobileNavLinks');
-    const navbar = document.getElementById('navbar');
 
-    if(mobileNavLinks.style.display == 'none') {
-        mobileNavLinks.style.display = 'flex';
-        navbar.style.boxShadow = '0 0.5rem 1rem #00000026';
-    } else {
-        mobileNavLinks.style.display= 'none';
+    if(mobileNavLinks.style.visibility == 'hidden') {
+        mobileNavLinks.style.visibility = 'visible';
         navbar.style.boxShadow = 'none';
+    } else {
+        mobileNavLinks.style.visibility = 'hidden';
+        navbar.style.boxShadow = '0 0.5rem 1rem #00000026';
     }
     
 }
