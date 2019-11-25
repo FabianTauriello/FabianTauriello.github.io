@@ -36,13 +36,6 @@ p {
     height: 0px;
     bottom: 50px;
     position: relative;
-
-    /* visibility: visible;
-    display: block;
-    height: 20px;
-    background-color: red;
-    bottom: 0px;
-    position: relative; */
 }
 
 .bg-primary {
@@ -167,12 +160,34 @@ ul {
 }
 
 #navbar a:hover:not(.active-nav-link) {
-    background-color: #111;
+    background-color: blue;
 }
 
 #navbar li {
     float: right;
     height: 50px;
+}
+
+#navIcon {
+    display: none;
+}
+
+#mobileNavLinks {
+    display: none;
+    flex-direction: column;
+    height: calc(100vh - 50px);
+    width: 100%;
+    position: fixed;
+    background-color: #0B0C10;
+    top: 50px;
+}
+
+#mobileNavLinks li {
+    flex-grow: 1;
+    /* border: 1px solid whitesmoke; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /**************************************************************************************************************************/
@@ -181,16 +196,12 @@ ul {
 
 /**************************************************************************************************************************/
 
-#about {
-    /* overflow: auto; */
-}
-
 #about-main-content-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-grow : 1;
+    flex-grow: 1;
 }
 
 #download-CV-button {
@@ -277,7 +288,7 @@ ul {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-grow : 1;
+    flex-grow: 1;
 }
 
 /**************************************************************************************************************************/
@@ -307,37 +318,42 @@ ul {
 /**************************************************************************************************************************/
 
 @media only screen and (max-width: 767px) {
-
+    /* NAVBAR */
+    #background-pic-container {
+        display: none;
+    }
+    /* ABOUT */
     #about-img {
         margin: 8% auto;
         border-radius: 0px 0px 0px 0px;
     }
-
     #about-main-content-container {
         padding: 30px 0;
     }
-
     #about-first-flex-container {
         width: 85%;
     }
-
     #about-second-flex-container li {
         margin: 1px 0;
         min-width: 100%;
     }
-
     .section-hr {
         width: 70%;
     }
-
     #download-CV-button {
         margin-right: auto;
     }
-    
+    /* NAVBAR */
+    #navLinks {
+        display: none;
+    }
+    #navIcon {
+        display: block;
+    }
 }
 
-
 /**************************************************************************************************************************/
+
 /**************************************************************************************************************************/
 
 /* remove later */
@@ -349,10 +365,6 @@ ul {
 .border {
     border: 1px solid;
 }
-
-
-/* REDUCE SIZE OF BACKGROUND IMAGE */
-
 
 /* THEMES */
 
@@ -377,3 +389,12 @@ ul {
 .light-grey {
     color: #45A29E
 }
+
+/* #ones {
+    position: fixed;
+    height: 50px;
+    background-color: red;
+    top: 50px;
+    right: 0;
+    left: 0;
+} */

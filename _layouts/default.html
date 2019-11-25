@@ -32,12 +32,22 @@
         <!-- MAIN AREA -->
         <main id="main">
                 <!-- NAV BAR -->
-                <ul id="navbar" class="">
-                        <li><a href="#contact-anchor">Contact</a></li>
-                        <li><a href="#blog-anchor">Blog</a></li>
-                        <li><a href="#projects-anchor">Projects</a></li>
-                        <li><a href="#about-anchor">About</a></li>
-                        <li><a class="active-nav-link" href="#">Home</a></li>
+                <ul id="navbar">
+                        <div id="navLinks">
+                                <li class="navLink"><a href="#contact-anchor">Contact</a></li>
+                                <li class="navLink"><a href="#blog-anchor">Blog</a></li>
+                                <li class="navLink"><a href="#projects-anchor">Projects</a></li>
+                                <li class="navLink"><a href="#about-anchor">About</a></li>
+                                <li class="navLink active-nav-link"><a href="#">Home</a></li>
+                        </div>
+                        <li id="navIcon" onclick="openNavLinks()" class="navIcon"><a href="javascript:void(0);"><i
+                                class="fa fa-bars"></i></a></li>
+                        <div id="mobileNavLinks">
+                                <li class=""><a href="#contact-anchor">Contact</a></li>
+                                <li class=""><a href="#blog-anchor">Blog</a></li>
+                                <li class=""><a href="#projects-anchor">Projects</a></li>
+                                <li class=""><a href="#about-anchor">About</a></li>
+                        </div>
                 </ul>
                 <!-- NAV BAR END -->
 
