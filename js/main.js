@@ -19,7 +19,7 @@ window.onscroll = function () {
 
 };
 window.onload = function () {
-
+    
 };
 
 // Change the current active navbar link

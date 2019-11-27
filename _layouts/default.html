@@ -3,6 +3,7 @@
 
 <head>
         <title>Fabian Tauriello</title>
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
                 integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
                 crossorigin="anonymous">
@@ -41,14 +42,17 @@
                                 <li class="navLink active-nav-link"><a href="#">Home</a></li>
                         </div>
                         <li id="navIcon" onclick="toggleNavLinks()" class="navIcon"><a href="javascript:void(0);"><i
-                                class="fa fa-bars"></i></a></li>
+                                                class="fa fa-bars"></i></a></li>
 
                 </ul>
                 <div id="mobileNavLinks">
-                        <li><a href="#contact-anchor" onclick="toggleNavLinks()">Contact</a></li><hr>
-                        <li><a href="#blog-anchor" onclick="toggleNavLinks()">Blog</a></li><hr>
-                        <li><a href="#projects-anchor" onclick="toggleNavLinks()">Projects</a></li><hr>
                         <li><a href="#about-anchor" onclick="toggleNavLinks()">About</a></li>
+                        <li><a href="#projects-anchor" onclick="toggleNavLinks()">Projects</a></li>
+                        <hr>
+                        <li><a href="#blog-anchor" onclick="toggleNavLinks()">Blog</a></li>
+                        <hr>
+                        <li><a href="#contact-anchor" onclick="toggleNavLinks()">Contact</a></li>
+                        <hr>
                 </div>
                 <!-- NAV BAR END -->
 
@@ -58,7 +62,7 @@
                         <h1 class="page-section-heading blk">ABOUT</h1>
                         <hr class="section-hr blk">
                         <div id="about-main-content-container" class="">
-                                <div id="about-first-flex-container" class="blk">
+                                <div id="about-first-flex-container" class="blk" data-aos="fade-up">
                                         <img id="about-img" src="images/profile-pic.png" class="" alt="Profile Picture">
                                         <div id="about-para-flex-container" class="light-blue">
                                                 <div id="about-para-text" class="">
@@ -83,15 +87,21 @@
                                                 </div>
                                                 <a id="download-CV-button" class="primary-button"
                                                         href="docs/Curriculum Vitae.pdf" download>
-                                                        Download CV
+                                                        <i class="fa fa-download"></i> Download CV
                                                 </a>
                                         </div>
                                 </div>
                                 <ul id="about-second-flex-container" class="light-blue">
-                                        <li class="text-center">Software Developer</li>
-                                        <li class="text-center">London, UK</li>
-                                        <li class="text-center">ftauriello@hotmail.com</li>
-                                        <li class="text-center">07572093185</li>
+                                        <li class="text-center" data-aos="fade"
+                                                data-aos-anchor-placement="about-first-flex-container">Software
+                                                Developer</li>
+                                        <li class="text-center" data-aos="fade" data-aos-delay="200"
+                                                data-aos-anchor-placement="about-first-flex-container">London, UK</li>
+                                        <li class="text-center" data-aos="fade" data-aos-delay="400"
+                                                data-aos-anchor-placement="about-first-flex-container">
+                                                ftauriello@hotmail.com</li>
+                                        <li class="text-center" data-aos="fade" data-aos-delay="600"
+                                                data-aos-anchor-placement="about-first-flex-container">07572093185</li>
                                 </ul>
                         </div>
                 </section>
@@ -110,36 +120,47 @@
 
                 <!-- BLOG SECTION -->
                 <div id="blog-anchor"></div>
-                <section id="blog" class="bg-light">
-                        <div class="">
-                                <h2>Blog</h2>
-                                <hr>
-                        </div>
-                        <div class="">
-
-                                <!-- BOOTSTRAP CARD LAYOUT -->
-                                <!-- {% for post in site.posts limit: 4 %}
-                                <div class="card">
-                                        <img class="card-img-top" src="../images/download.svg" alt="Blog post image">
-                                        <div class="card-body">
-                                                <h5 class="card-title">{{ post.title }}</h5>
-                                                <p class="card-text">some text here</p>
-                                                <a href="{{ post.url }}" class="btn btn-primary">Read more</a>
+                <section id="blog" class="">
+                        <h1 class="page-section-heading blk">BLOG</h1>
+                        <hr class="section-hr blk">
+                        <div id="blog-main-content-container" class="">
+                                <!-- MY BOX LAYOUT -->
+                                {% for post in site.posts limit: 3 %}
+                                {% if forloop.index == 1 %}
+                                <div class="blog-card border" data-aos="fade-up" data-aos-delay="100">
+                                        <img src="../images/download.svg" alt="Blog post image">
+                                        <div class="blog-post-container border">
+                                                <a href="{{ post.url }}">
+                                                        <h5>{{ post.title }}</h5>
+                                                </a>
+                                                <p>{{ post.excerpt }}</p>
+                                                <span>date</span>
                                         </div>
                                 </div>
-                                {% endfor %} -->
-
-                                <!-- MY BOX LAYOUT -->
-                                {% for post in site.posts limit: 4 %}
-                                <div>
+                                {% elsif forloop.index == 2 %}
+                                <div class="blog-card border" data-aos="fade-up" data-aos-delay="200">
                                         <img src="../images/download.svg" alt="Blog post image">
-                                        <a href="{{ post.url }}">
-                                                <h5>{{ post.title }}</h5>
-                                        </a>
-                                        <p>{{ post.excerpt }}</p>
+                                        <div class="blog-post-container border">
+                                                <a href="{{ post.url }}">
+                                                        <h5>{{ post.title }}</h5>
+                                                </a>
+                                                <p>{{ post.excerpt }}</p>
+                                                <span>date</span>
+                                        </div>
                                 </div>
+                                {% else %}
+                                <div class="blog-card border" data-aos="fade-up" data-aos-delay="300">
+                                        <img src="../images/download.svg" alt="Blog post image">
+                                        <div class="blog-post-container border">
+                                                <a href="{{ post.url }}">
+                                                        <h5>{{ post.title }}</h5>
+                                                </a>
+                                                <p>{{ post.excerpt }}</p>
+                                                <span>date</span>
+                                        </div>
+                                </div>
+                                {% endif %}
                                 {% endfor %}
-
                         </div>
                 </section>
                 <!-- BLOG SECTION END -->
@@ -147,26 +168,18 @@
                 <!-- CONTACT SECTION -->
                 <div id="contact-anchor"></div>
                 <section id="contact" class="">
-                        <div class="">
-                                <h2>Contact</h2>
-                                <!-- <p>Get in touch</p> -->
-                                <hr>
-                        </div>
-                        <div class="">
-                                <form action="https://formspree.io/ftauriello@hotmail.com" method="POST">
-                                        <div class="form-group">
-                                                <input type="text" name="name" class="form-control" id="nameInput"
-                                                        placeholder="Name">
-                                        </div>
-                                        <div class="form-group">
-                                                <input type="email" name="email" class="form-control" id="emailInput"
-                                                        placeholder="Enter email">
-                                        </div>
-                                        <div class="form-group">
-                                                <textarea class="form-control" name="comment" id="textAreaInput"
-                                                        placeholder="Your comment"></textarea>
-                                        </div>
-                                        <button type="submit" value="send" class="btn btn-primary">Submit</button>
+                        <h1 class="page-section-heading light-blue">CONTACT</h1>
+                        <hr class="section-hr light-blue">
+                        <div id="contact-main-content-container" class="">
+                                <form id="contact-form" action="https://formspree.io/ftauriello@hotmail.com"
+                                        method="POST" class="">
+                                        <input id="name-input" type="text" name="name" class="" placeholder="Name">
+                                        <input id="email-input" type="email" name="email" class=""
+                                                placeholder="Enter email">
+                                        <textarea id="text-area-input" class="" name="comment"
+                                                placeholder="Your comment"></textarea>
+                                        <button id="submit-button" type="submit" value="send"
+                                                class="primary-button">Submit</button>
                                 </form>
                         </div>
                 </section>
@@ -200,7 +213,28 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
                 integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
                 crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script src="../js/main.js"></script>
+        <script>AOS.init({
+                        // Global settings:
+                        disable: 'tablet', // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+                        startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+                        initClassName: 'aos-init', // class applied after initialization
+                        animatedClassName: 'aos-animate', // class applied on animation
+                        useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+                        disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+                        debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+                        throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+
+                        // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+                        offset: 120, // offset (in px) from the original trigger point
+                        delay: 0, // values from 0 to 3000, with step 50ms
+                        duration: 1200, // values from 0 to 3000, with step 50ms
+                        easing: 'ease', // default easing for AOS animations
+                        once: true, // whether animation should happen only once - while scrolling down
+                        mirror: false, // whether elements should animate out while scrolling past them
+                        anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+                });</script>
 </body>
 
 </html>

@@ -17,7 +17,7 @@ html {
 * {
     margin: 0 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box !important;
 }
 
 hr {
@@ -32,6 +32,10 @@ hr {
 
 p {
     line-height: 1.6;
+}
+
+a {
+    text-decoration: none !important;
 }
 
 #about-anchor, #projects-anchor, #blog-anchor, #contact-anchor {
@@ -56,14 +60,13 @@ p {
 
 .primary-button {
     background-color: #157ffb;
+    width: 200px;
     border: none;
     color: white;
     padding: 12px 28px;
     text-align: center;
-    text-decoration: none;
     display: inline-block;
     font-size: 14px;
-    margin: 4px 2px;
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
     cursor: pointer;
@@ -71,9 +74,10 @@ p {
 }
 
 .page-section-heading {
+    /* border: 1px solid; */
     font-size: 60px;
     text-align: center;
-    padding-top: 30px;
+    padding-top: 50px;
     padding-bottom: 10px;
 }
 
@@ -100,6 +104,10 @@ section {
 
 li {
     list-style-type: none;
+}
+
+#about-main-content-container, #projects-main-content-container, #blog-main-content-container, #contact-main-content-container {
+    margin-top: -50px;
 }
 
 /**************************************************************************************************************************/
@@ -161,7 +169,6 @@ li {
     padding: 14px 15px;
     overflow: hidden;
     color: #66FCF1;
-    text-decoration: none;
 }
 
 #navLinks li:hover:not(.active-nav-link) {
@@ -197,7 +204,6 @@ li {
 
 #mobileNavLinks a {
     color: #66FCF1;
-    text-decoration: none;
     height: 100%;
     width: 100%;
     display: flex;
@@ -207,14 +213,14 @@ li {
 
 .openMobileNavLinks {
     top: 50px !important;
-    transition: 950ms;
-    /* -webkit-transition: 800ms; */
+    transition: 300ms;
+    /* -webkit-transition: 300ms; */
 }
 
 .closeMobileNavLinks {
     top: -50vh !important;
-    transition: 950ms;
-    /* -webkit-transition: 800ms; */
+    transition: 300ms;
+    /* -webkit-transition: 300ms; */
 }
 
 /**************************************************************************************************************************/
@@ -232,15 +238,13 @@ li {
 }
 
 #download-CV-button {
-    width: 200px;
     margin-top: 10px;
     margin-right: 0;
     margin-left: auto;
-    text-decoration: none;
 }
 
 #about-first-flex-container {
-    background-color: #0B0C10;
+    background-color: #1F2833;
     width: 70%;
     padding: 0;
     display: flex;
@@ -258,7 +262,7 @@ li {
 }
 
 #about-second-flex-container li {
-    background-color: #0B0C10;
+    background-color: #1F2833;
     padding: 10px;
     flex: 1;
     margin: 0 10px;
@@ -324,8 +328,51 @@ li {
 
 /**************************************************************************************************************************/
 
-#blog {
-    background-color: red;
+#blog {}
+
+#blog-main-content-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+}
+
+.blog-card {
+    max-width: 286px;
+    max-height: 400px;
+    overflow: hidden;
+    flex-grow: 1;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.blog-post-container {
+    padding: 10px;
+}
+
+.blog-post-container p {
+    text-align: justify;
+}
+
+.blog-post-container span {
+    font-size: 13px;
+    color: grey;
+    font-style: italic;
+}
+
+#blog-main-content-container .blog-card:nth-child(1) {
+    margin-right: 25px;
+}
+
+#blog-main-content-container .blog-card:nth-child(3) {
+    margin-left: 25px;
+}
+
+.blog-card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    /* width: 300px; */
+    /* transition: 0.3s; */
 }
 
 /**************************************************************************************************************************/
@@ -335,7 +382,40 @@ li {
 /**************************************************************************************************************************/
 
 #contact {
-    background-color: rgb(211, 137, 77);
+    overflow: auto;
+    background-color: #1F2833;
+}
+
+#contact-main-content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+#contact-form {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+#email-input, #text-area-input, #submit-button {
+    margin-top: 15px;
+}
+
+textarea {
+    height: 150px;
+    resize: none;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px 10px;
+    border: 1px solid #f8f9fa;
+    border-radius: 4px;
 }
 
 /**************************************************************************************************************************/
@@ -345,6 +425,10 @@ li {
 /**************************************************************************************************************************/
 
 @media only screen and (max-width: 767px) {
+    /* GENERAL */
+    #about-main-content-container, #projects-main-content-container, #blog-main-content-container, #contact-main-content-container {
+        margin-top: auto;
+    }
     /* NAVBAR */
     #background-pic-container {
         display: none;
@@ -376,6 +460,20 @@ li {
     }
     #navIcon {
         display: block;
+    }
+    /* BLOG */
+    #blog-main-content-container .blog-card:nth-child(1) {
+        /* margin-right: 0; */
+        margin: 8% auto;
+    }
+    #blog-main-content-container .blog-card:nth-child(3) {
+        /* margin-left: 0; */
+        margin: 8% auto;
+    }
+    /* CONTACT */
+    #contact-form {
+        width: 85%;
+        align-items: center;
     }
 }
 
