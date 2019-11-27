@@ -12,6 +12,36 @@ const navbar = document.getElementById('navbar');
 
 let mobileMenuIsDisplayed = false;
 
+// Set up home page title divs
+const message = [
+    ['H', 'E', 'L', 'L', 'O', ':)'],
+    ['T', 'H', 'A', 'N', 'K', 'S', '_', 'F', 'O', 'R', '_', 'S', 'T', 'O', 'P', 'P', 'I', 'N', 'G', '_', 'B', 'Y']
+];
+let animationDelay = 1;
+for (let i = 0; i < message.length; i++) {
+    let parentRow = (i == 0) ? document.getElementById("home-msg-first-row") : document.getElementById("home-msg-second-row");
+    for (j = 0; j < message[i].length; j++) {
+        // create letter container
+        let wrapperDiv = document.createElement("div");
+        wrapperDiv.className = "letter-wrapper";
+
+        // create letter element
+        let innerSpan = document.createElement("span");
+        innerSpan.className = "span-letter";
+        innerSpan.textContent = message[i][j];
+        innerSpan.style.animationDelay = (animationDelay += 0.03) + "s";
+
+        // combine both above by making letter element child of letter container
+        wrapperDiv.appendChild(innerSpan);
+
+        // append new element to document
+        parentRow.appendChild(wrapperDiv);
+
+        // console.log(newElement);
+    }
+}
+
+
 //-EVENTS AND FUNCTIONS--------------------------------------------------------------------------------------------------------
 
 
@@ -19,7 +49,8 @@ window.onscroll = function () {
 
 };
 window.onload = function () {
-    
+    // console.log(message[0][0]);
+
 };
 
 // Change the current active navbar link
@@ -34,7 +65,7 @@ function changeActiveNavbarLink() {
 
 function toggleNavLinks() {
 
-    if(!mobileMenuIsDisplayed) {
+    if (!mobileMenuIsDisplayed) {
         navbar.style.boxShadow = 'none';
         mobileNavLinks.classList.add('openMobileNavLinks');
         mobileNavLinks.classList.remove('closeMobileNavLinks');
@@ -45,5 +76,5 @@ function toggleNavLinks() {
     }
 
     mobileMenuIsDisplayed = !mobileMenuIsDisplayed;
-    
+
 }
