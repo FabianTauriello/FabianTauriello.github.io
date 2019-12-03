@@ -10,7 +10,7 @@
         <link rel="stylesheet"
                 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet"
-                href="https://fonts.googleapis.com/css?family=Lobster|Archivo|Cardo|Cormorant|Fira+Sans|Fjalla+One|Frank+Ruhl+Libre|Karla|Bebas+Neue|Lora|Montserrat|Playfair+Display|Playfair+Display+SC|Roboto|Rubik|Spectral|Spectral+SC|Ubuntu">
+                href="https://fonts.googleapis.com/css?family=Lobster|Abril+Fatface|Archivo|Anton|Notable|Cardo|Cormorant|Fira+Sans|Fjalla+One|Frank+Ruhl+Libre|Karla|Bebas+Neue|Lora|Montserrat|Playfair+Display|Playfair+Display+SC|Roboto|Rubik|Spectral|Spectral+SC|Ubuntu">
         <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="../css/main.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -59,8 +59,8 @@
                 <!-- ABOUT SECTION -->
                 <div id="about-anchor"></div>
                 <section id="about" class="">
-                        <h1 class="page-section-heading blk">ABOUT</h1>
-                        <hr class="section-hr blk">
+                        <h1 class="page-section-heading blk">About</h1>
+                        <hr class="section-hr blk" data-aos="zoom-in">
                         <div id="about-main-content-container" class="">
                                 <div id="about-first-flex-container" class="blk" data-aos="fade-up">
                                         <img id="about-img" src="images/profile-pic.png" class="" alt="Profile Picture">
@@ -114,8 +114,8 @@
                 <!-- PROJECTS SECTION -->
                 <div id="projects-anchor"></div>
                 <section id="projects" class="">
-                        <h1 class="page-section-heading light-blue">PROJECTS</h1>
-                        <hr class="section-hr light-blue">
+                        <h1 class="page-section-heading light-blue">Projects</h1>
+                        <hr class="section-hr light-blue" data-aos="zoom-in">
                         <div id="projects-main-content-container" class="light-blue">
                                 <h4 class="light-blue" style="font-style: italic">...Coming Soon</h4>
                         </div>
@@ -125,8 +125,8 @@
                 <!-- BLOG SECTION -->
                 <div id="blog-anchor"></div>
                 <section id="blog" class="">
-                        <h1 class="page-section-heading blk">BLOG</h1>
-                        <hr class="section-hr blk">
+                        <h1 class="page-section-heading blk">Blog</h1>
+                        <hr class="section-hr blk" data-aos="zoom-in">
                         <div id="blog-main-content-container" class="">
                                 <!-- MY BOX LAYOUT -->
                                 {% for post in site.posts limit: 3 %}
@@ -145,7 +145,8 @@
                                 <div class="blog-card border" data-aos="fade-up"></span>
                                         <img src="../images/download.svg" alt="Blog post image">
                                         <div class="blog-post-container border">
-                                                <a href="{{ post.url }}">
+                                                <!-- <a href="{{ post.url }}"> -->
+                                                        <a href="#">
                                                         <h5>{{ post.title }}</h5>
                                                 </a>
                                                 <p>{{ post.excerpt }}</p>
@@ -172,42 +173,35 @@
                 <!-- CONTACT SECTION -->
                 <div id="contact-anchor"></div>
                 <section id="contact" class="">
-                        <h1 class="page-section-heading light-blue">CONTACT</h1>
-                        <hr class="section-hr light-blue">
+                        <h1 class="page-section-heading light-blue">Contact</h1>
+                        <hr class="section-hr light-blue" data-aos="zoom-in">
                         <div id="contact-main-content-container" class="">
                                 <form id="contact-form" action="https://formspree.io/ftauriello@hotmail.com"
                                         method="POST" class="">
                                         <input id="name-input" type="text" name="name" class="" placeholder="Name">
-                                        <input id="email-input" type="email" name="email" class=""
-                                                placeholder="Enter email">
+                                        <input id="email-input" type="email" name="email" class="" placeholder="Email">
                                         <textarea id="text-area-input" class="" name="comment"
-                                                placeholder="Your comment"></textarea>
+                                                placeholder="Comment"></textarea>
                                         <button id="submit-button" type="submit" value="send"
                                                 class="primary-button">Submit</button>
                                 </form>
                         </div>
                 </section>
                 <!-- CONTACT SECTION END -->
-
         </main>
-        <!-- MAIN AREA END -->
-
         <!-- FOOTER SECTION -->
-        <footer id="footer">
-
-                <!-- <span id="linked-in-button" class="fa-stack fa-lg border">
-                                        <a href="#"
-                                                class="fa fa-circle fa-stack-2x icon-background"></a>
-                                        <a href="#" class="fa fa-linkedin fa-stack-1x"></a>
-                                </span>
-                                <span id="github-button" class="fa-stack fa-lg">
-                                        <a href="#"
-                                                class="fa fa-circle fa-stack-2x icon-background"></a>
-                                        <a hred="#" class="fa fa-github fa-stack-1x"></a>
-                                </span> -->
-
+        <footer id="footer" class="">
+                <div class="footer-icons">
+                        <a href="https://www.linkedin.com/in/fabian-tauriello" title="LinkedIn" class="" target="_blank"><i class="fa fa-linkedin fa-lg"></i></a>
+                        <a href="https://github.com/FabianTauriello" title="GitHub" target="_blank" class=""><i class="fa fa-github fa-lg"></i></a>
+                </div>
+                <div class="footer-text">
+                        <p class="">© Fabian Tauriello 2019</p>
+                        <p class="">Banner photo by LoboStudio Hamburg on Unsplash</p>
+                </div>
         </footer>
         <!-- FOOTER SECTION END -->
+        <!-- MAIN AREA END -->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
                 integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
                 crossorigin="anonymous"></script>
@@ -220,7 +214,7 @@
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script src="../js/main.js"></script>
         <script>AOS.init({
-                        // Global settings:
+                        // Global settings for page scroll animations:
                         disable: 'tablet', // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
                         startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
                         initClassName: 'aos-init', // class applied after initialization

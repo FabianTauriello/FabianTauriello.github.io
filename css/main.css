@@ -92,7 +92,7 @@ a {
 }
 
 h1 {
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Abril Fatface', sans-serif;
     margin: 0px;
 }
 
@@ -107,7 +107,7 @@ li {
 }
 
 #about-main-content-container, #projects-main-content-container, #blog-main-content-container, #contact-main-content-container {
-    margin-top: -50px;
+    padding-bottom: 50px;
 }
 
 /**************************************************************************************************************************/
@@ -130,7 +130,6 @@ li {
 #home-msg-first-row, #home-msg-second-row {
     flex-wrap: wrap;
     display: flex;
-    /* border: 1px solid white; */
 }
 
 .letter-wrapper {
@@ -146,38 +145,18 @@ li {
 
 .span-letter {
     font-size: 35px;
-    /* border: solid 1px white; */
-    background-color: rgb(148, 148, 148);
+    background-color: #949494;
     position: absolute;
     animation: slide .05s forwards;
     left: -100%;
 }
 
 @keyframes slide {
-    100% { left: 0; width: 100%;}
+    100% {
+        left: 0;
+        width: 100%;
+    }
 }
-
-
-/* 
-.letter-wrapper:nth-child(1) span {
-    animation-delay: 1s;
-}
-.letter-wrapper:nth-child(2) span {
-    animation-delay: 1.2s;
-}
-.letter-wrapper:nth-child(3) span {
-    animation-delay: 1.4s;
-}
-.letter-wrapper:nth-child(4) span {
-    animation-delay: 1.6s;
-}
-.letter-wrapper:nth-child(5) span {
-    animation-delay: 1.8s;
-} */
-
-
-
-
 
 /**************************************************************************************************************************/
 
@@ -326,10 +305,6 @@ li {
     color: white;
 }
 
-.fa-lg:hover {
-    opacity: 0.5;
-}
-
 #about-img {
     border-radius: 10px 0 0 10px;
     max-width: 200px;
@@ -338,7 +313,7 @@ li {
 }
 
 .icon-background {
-    color: red;
+    /* color: red; */
 }
 
 /**************************************************************************************************************************/
@@ -409,8 +384,6 @@ li {
 
 .blog-card:hover {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-    /* width: 300px; */
-    /* transition: 0.3s; */
 }
 
 /**************************************************************************************************************************/
@@ -455,6 +428,58 @@ input, textarea {
     border: 1px solid #f8f9fa;
     border-radius: 4px;
 }
+
+/**************************************************************************************************************************/
+
+/* FOOTER */
+
+/**************************************************************************************************************************/
+
+#footer {
+    height: 120px;
+    background-color: #0B0C10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: #949494;
+    padding-top: 10px;
+}
+
+.footer-text {
+    margin: 0;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.footer-text p {
+    line-height: 0.;
+    margin: 0;
+}
+
+.footer-icons {
+    width: 90px;
+    margin-top: 20px;
+}
+
+.fa-github {
+    float: right;
+}
+
+.fa-linkedin {
+    float: left;
+}
+
+.fa-github, .fa-linkedin {
+    color: #949494;
+}
+
+.fa-github:hover, .fa-linkedin:hover {
+    color: #66fCF1;
+}
+
+/* color: #66fCF1; */
 
 /**************************************************************************************************************************/
 

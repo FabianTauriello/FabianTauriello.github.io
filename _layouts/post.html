@@ -1,4 +1,29 @@
-<h1>{{ page.title }}</h1>
-<p>{{ page.date | date_to_string }} - {{ page.author }}</p>
+<!DOCTYPE html>
+<html lang="en">
 
-{{ content }}
+<head>
+    <title>{{ page.title }}</title>
+</head>
+
+<body>
+    <h1>{{ page.title }}</h1>
+    <p>{{ page.date | date_to_string }} - {{ page.author }}</p>
+
+    <p>{{ content }}</p>
+
+    {% for category in site.categories[General] %}
+    <h3> {{ page.title }} </h3>
+    <ul>
+
+    </ul>
+    {% endfor %}
+
+
+    <!-- <div class="sidebar">        
+        <a href="#" class="w3-bar-item w3-button">Link 1</a>
+        <a href="#" class="w3-bar-item w3-button">Link 2</a>
+        <a href="#" class="w3-bar-item w3-button">Link 3</a>
+    </div> -->
+</body>
+
+</html>

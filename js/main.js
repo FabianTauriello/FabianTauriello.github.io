@@ -1,15 +1,12 @@
 // get navbar links and assign it to array
 const navbarlinks = document.getElementById('navbar').querySelectorAll('.navLink');
 
-// add event same event listener to all navbar links 
+// add event listener to all navbar links 
 for (let i = 0; i < navbarlinks.length; i++) {
     navbarlinks[i].addEventListener('click', changeActiveNavbarLink);
 }
 
-const mobileNavLinks = document.getElementById('mobileNavLinks');
-
-const navbar = document.getElementById('navbar');
-
+// create variable to store whether the mobile nav menu is displayed
 let mobileMenuIsDisplayed = false;
 
 // Set up home page title divs
@@ -17,19 +14,24 @@ const message = [
     ['H', 'E', 'L', 'L', 'O', ':)'],
     ['T', 'H', 'A', 'N', 'K', 'S', '_', 'F', 'O', 'R', '_', 'S', 'T', 'O', 'P', 'P', 'I', 'N', 'G', '_', 'B', 'Y']
 ];
-let animationDelay = 1;
+let animationDelay = .7;
 for (let i = 0; i < message.length; i++) {
     let parentRow = (i == 0) ? document.getElementById("home-msg-first-row") : document.getElementById("home-msg-second-row");
     for (j = 0; j < message[i].length; j++) {
         // create letter container
         let wrapperDiv = document.createElement("div");
-        wrapperDiv.className = "letter-wrapper";
+        wrapperDiv.className ='letter-wrapper';
 
         // create letter element
         let innerSpan = document.createElement("span");
-        innerSpan.className = "span-letter";
+        innerSpan.className = 'span-letter';
         innerSpan.textContent = message[i][j];
-        innerSpan.style.animationDelay = (animationDelay += 0.03) + "s";
+        //  add a second delay before starting second row
+        if(i == 1 && j == 0) {
+            innerSpan.style.animationDelay = (animationDelay += 1) + "s";
+        } else {
+            innerSpan.style.animationDelay = (animationDelay += 0.03) + "s";
+        }
 
         // combine both above by making letter element child of letter container
         wrapperDiv.appendChild(innerSpan);
@@ -64,6 +66,9 @@ function changeActiveNavbarLink() {
 }
 
 function toggleNavLinks() {
+
+    const mobileNavLinks = document.getElementById('mobileNavLinks');
+    const navbar = document.getElementById('navbar');
 
     if (!mobileMenuIsDisplayed) {
         navbar.style.boxShadow = 'none';

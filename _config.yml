@@ -13,34 +13,30 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Your awesome title
-email: your-email@example.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+title: Fabian Tauriello - Personal Site
+email: ftauriello@hotmail.com
+description: >- # this means to ignore newlines until "baseurl:" The desription will appear in my document head meta (for Google search results) and in my feed.xml site description.
+ This is a personal website showcasing the projects I'm working on. The Projects are documented in a blog and there is also a contact form for getting in touch with me.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "https://fabiantauriello.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
+github_username: "FabianTauriello"
 
 # Build settings
 markdown: kramdown
-theme: minima
+# theme: minima
 future: true
 excerpt_separator: <!--more-->
-plugins:
-  - jekyll-feed
 
-defaults:
-  - scope: 
-        path: "_posts"
-    values:
-        layout: "post"
-    scope:
-        path: ""
-    values:
-        author: "Fabian Tauriello"
+# defaults:
+#   - 
+#     scope: 
+#         path: "_posts" # set default front matter to apply to _posts folder only
+#     values:
+#         layout: "post" # sets all posts in _posts with this layout
+#     scope:
+#         path: "" # set default front matter to apply to pages on website
+#     values:
+#         author: "Fabian Tauriello"
     
 
 # Exclude from processing.
