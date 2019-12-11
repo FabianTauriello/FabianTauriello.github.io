@@ -12,7 +12,7 @@ let mobileMenuIsDisplayed = false;
 // Set up home page title divs
 const message = [
     ['H', 'E', 'L', 'L', 'O', ':)'],
-    ['T', 'H', 'A', 'N', 'K', 'S', '_', 'F', 'O', 'R', '_', 'S', 'T', 'O', 'P', 'P', 'I', 'N', 'G', '_', 'B', 'Y']
+    ['T', 'H', 'A', 'N', 'K', 'S', '_', 'F', 'O', 'R', '_', 'V', 'I', 'S', 'I', 'T', 'I', 'N', 'G']
 ];
 let animationDelay = .7;
 for (let i = 0; i < message.length; i++) {
@@ -39,21 +39,12 @@ for (let i = 0; i < message.length; i++) {
         // append new element to document
         parentRow.appendChild(wrapperDiv);
 
-        // console.log(newElement);
     }
 }
 
-
-//-EVENTS AND FUNCTIONS--------------------------------------------------------------------------------------------------------
-
-
-window.onscroll = function () {
-
-};
-window.onload = function () {
-    // console.log(message[0][0]);
-
-};
+// const cursor = document.getElementById('home-msg-second-row').lastElementChild;
+// cursor.classList.add('blinking-cursor');
+// cursor.firstChild.style
 
 // Change the current active navbar link
 function changeActiveNavbarLink() {

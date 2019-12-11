@@ -14,7 +14,6 @@
         <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="../css/main.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 </head>
 
 <body>
@@ -35,10 +34,10 @@
                 <!-- NAV BAR -->
                 <ul id="navbar">
                         <div id="navLinks">
-                                <li class="navLink"><a href="#contact-anchor">Contact</a></li>
-                                <li class="navLink"><a href="#blog-anchor">Blog</a></li>
-                                <li class="navLink"><a href="#projects-anchor">Projects</a></li>
-                                <li class="navLink"><a href="#about-anchor">About</a></li>
+                                <li class="navLink"><a href="#contact">Contact</a></li>
+                                <li class="navLink"><a href="#blog">Blog</a></li>
+                                <li class="navLink"><a href="#projects">Projects</a></li>
+                                <li class="navLink"><a href="#about">About</a></li>
                                 <li class="navLink active-nav-link"><a href="#">Home</a></li>
                         </div>
                         <li id="navIcon" onclick="toggleNavLinks()" class="navIcon"><a href="javascript:void(0);"><i
@@ -46,19 +45,19 @@
 
                 </ul>
                 <div id="mobileNavLinks">
-                        <li><a href="#about-anchor" onclick="toggleNavLinks()">About</a></li>
-                        <li><a href="#projects-anchor" onclick="toggleNavLinks()">Projects</a></li>
+                        <li><a href="#about" onclick="toggleNavLinks()">About</a></li>
+                        <li><a href="#projects" onclick="toggleNavLinks()">Projects</a></li>
                         <hr>
-                        <li><a href="#blog-anchor" onclick="toggleNavLinks()">Blog</a></li>
+                        <li><a href="#blog" onclick="toggleNavLinks()">Blog</a></li>
                         <hr>
-                        <li><a href="#contact-anchor" onclick="toggleNavLinks()">Contact</a></li>
+                        <li><a href="#contact" onclick="toggleNavLinks()">Contact</a></li>
                         <hr>
                 </div>
                 <!-- NAV BAR END -->
 
                 <!-- ABOUT SECTION -->
-                <div id="about-anchor"></div>
-                <section id="about" class="">
+                <div id="about"></div>
+                <section class="">
                         <h1 class="page-section-heading blk">About</h1>
                         <hr class="section-hr blk" data-aos="zoom-in">
                         <div id="about-main-content-container" class="">
@@ -67,7 +66,7 @@
                                         <div id="about-para-flex-container" class="light-blue">
                                                 <div id="about-para-text" class="">
                                                         <h3>Hi! My name is Fabian</h3>
-                                                        <br>
+                                                        <!-- <br> -->
                                                         <p id="profile-description" class="">
                                                                 I am a motivated and passionate software
                                                                 developer seeking an opportunity to
@@ -82,7 +81,9 @@
                                                                 ready to apply them in a new
                                                                 innovative workplace. I am excited about
                                                                 taking on a new career challenge in
-                                                                London.
+                                                                London. I invite you to check out the 
+                                                                blog and project spaces below for updates 
+                                                                on what I'm currently working on.
                                                         </p>
                                                 </div>
                                                 <a id="download-CV-button" class="primary-button"
@@ -112,8 +113,8 @@
                 <!-- ABOUT SECTION END -->
 
                 <!-- PROJECTS SECTION -->
-                <div id="projects-anchor"></div>
-                <section id="projects" class="">
+                <div id="projects"></div>
+                <section id="projects-section" class="">
                         <h1 class="page-section-heading light-blue">Projects</h1>
                         <hr class="section-hr light-blue" data-aos="zoom-in">
                         <div id="projects-main-content-container" class="light-blue">
@@ -123,8 +124,8 @@
                 <!-- PROJECTS SECTION END -->
 
                 <!-- BLOG SECTION -->
-                <div id="blog-anchor"></div>
-                <section id="blog" class="">
+                <div id="blog"></div>
+                <section class="">
                         <h1 class="page-section-heading blk">Blog</h1>
                         <hr class="section-hr blk" data-aos="zoom-in">
                         <div id="blog-main-content-container" class="">
@@ -132,36 +133,36 @@
                                 {% for post in site.posts limit: 3 %}
                                 {% if forloop.index == 1 %}
                                 <div class="blog-card border" data-aos="fade-up">
-                                        <img src="../images/download.svg" alt="Blog post image">
-                                        <div class="blog-post-container border">
+                                        <img class="blog-thumb-img" src="../images/welcome.jpg" alt="Blog post image">
+                                        <div class="blog-post-container">
                                                 <a href="{{ post.url }}">
                                                         <h5>{{ post.title }}</h5>
                                                 </a>
-                                                <p>{{ post.excerpt }}</p>
-                                                <span>date</span>
+                                                <p>{{ post.excerpt | truncate: 90 }}</p>
+                                                <span>{{ post.date | date_to_string }}</span>
                                         </div>
                                 </div>
                                 {% elsif forloop.index == 2 %}
-                                <div class="blog-card border" data-aos="fade-up"></span>
-                                        <img src="../images/download.svg" alt="Blog post image">
-                                        <div class="blog-post-container border">
-                                                <!-- <a href="{{ post.url }}"> -->
-                                                        <a href="#">
+                                <div class="blog-card border" data-aos="fade-up">
+                                        <img class="blog-thumb-img" src="../images/download.svg" alt="Blog post image">
+                                        <div class="blog-post-container">
+                                                <a href="{{ post.url }}">
+                                                        <!-- <a href="#"> -->
                                                         <h5>{{ post.title }}</h5>
                                                 </a>
-                                                <p>{{ post.excerpt }}</p>
-                                                <span>date</span>
+                                                <p>{{ post.excerpt | truncate: 90 }}</p>
+                                                <span>{{ post.date | date_to_string }}</span>
                                         </div>
                                 </div>
                                 {% else %}
                                 <div class="blog-card border" data-aos="fade-up">
-                                        <img src="../images/download.svg" alt="Blog post image">
-                                        <div class="blog-post-container border">
+                                        <img class="blog-thumb-img" src="../images/download.svg" alt="Blog post image">
+                                        <div class="blog-post-container">
                                                 <a href="{{ post.url }}">
                                                         <h5>{{ post.title }}</h5>
                                                 </a>
-                                                <p>{{ post.excerpt }}</p>
-                                                <span>date</span>
+                                                <p>{{ post.excerpt | truncate: 90 }}</p>
+                                                <span>{{ post.date | date_to_string }}</span>
                                         </div>
                                 </div>
                                 {% endif %}
@@ -171,8 +172,8 @@
                 <!-- BLOG SECTION END -->
 
                 <!-- CONTACT SECTION -->
-                <div id="contact-anchor"></div>
-                <section id="contact" class="">
+                <div id="contact"></div>
+                <section id="contact-section" class="">
                         <h1 class="page-section-heading light-blue">Contact</h1>
                         <hr class="section-hr light-blue" data-aos="zoom-in">
                         <div id="contact-main-content-container" class="">

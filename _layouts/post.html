@@ -3,27 +3,42 @@
 
 <head>
     <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat|Abril+Fatface">
+    <link rel="stylesheet" href="../../../../css/post.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
-    <h1>{{ page.title }}</h1>
-    <p>{{ page.date | date_to_string }} - {{ page.author }}</p>
-
-    <p>{{ content }}</p>
-
-    {% for category in site.categories[General] %}
-    <h3> {{ page.title }} </h3>
-    <ul>
-
-    </ul>
-    {% endfor %}
-
-
-    <!-- <div class="sidebar">        
-        <a href="#" class="w3-bar-item w3-button">Link 1</a>
-        <a href="#" class="w3-bar-item w3-button">Link 2</a>
-        <a href="#" class="w3-bar-item w3-button">Link 3</a>
-    </div> -->
+    <main>
+        <div id="main-content" class="">
+            <h1 class="">{{ page.title }}</h1>
+            <hr>
+            <p class="small-date-text">{{ page.date | date_to_string }} - {{ page.author }}</p>
+            <br>
+            <p id="blog-text" class="mains">{{ content }}</p>
+            <br>
+        </div>
+        <div id="sidebar" class="">
+            <div id="sidebar-heading">
+                <h3>Post History</h3>
+            </div>
+            <div id="sidebar-main">
+                <h4>General</h4>
+                <ul>
+                    {% for post in site.categories.general %}
+                    <li><a href="{{ post.url }}">{{ post.title }} - {{ post.date | date_to_string }}</a></li>
+                    {% endfor %}
+                </ul>
+                <br>
+                <h4>Project Updates</h4>
+                <ul>
+                    {% for post in site.categories.project-update %}
+                    <li><a href="{{ post.url }}">{{ post.title }} - {{ post.date | date_to_string }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </main>
 </body>
 
 </html>

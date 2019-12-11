@@ -1,0 +1,135 @@
+/**************************************************************************************************************************/
+
+/* RESET AND SETUP ELEMENTS */
+
+/**************************************************************************************************************************/
+
+* {
+    margin: 0 0;
+    padding: 0;
+    box-sizing: border-box !important;
+    font-family: 'Montserrat', sans-serif;;
+}
+
+/**************************************************************************************************************************/
+
+/* SIDEBAR */
+
+/**************************************************************************************************************************/
+
+#sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 80%;
+    background-color: #1F2833;
+    box-shadow: 5px 0 10px #413939;
+    z-index: 1;
+}
+
+#sidebar-heading {
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    height: 60px;
+    color: #66fcf1;
+    background-color: #0B0C10;
+    border-bottom: solid 1px;
+    border-color: #66fcf1;
+    /* box-shadow: 0 5px 5px; */
+}
+
+#sidebar-main {
+    padding: 20px;
+    color: #66fCF1;
+}
+
+#sidebar-main li {
+    list-style: none;
+}
+
+#sidebar-main a {
+    text-decoration: none;
+    color: #66fCF1;
+}
+
+#sidebar-main a:hover {
+    text-decoration: underline;
+}
+
+#sidebar-main li {
+    font-size: 13px;
+    margin-left: 5px;
+}
+
+/**************************************************************************************************************************/
+
+/* MAIN CONTENT */
+
+/**************************************************************************************************************************/
+
+#main-content {
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    left: 20%;
+    margin-right: 0;
+    padding: 20px 70px;
+    overflow: scroll;
+}
+
+#main-content h1 {
+    min-height: 100px;
+    font-family: 'Abril Fatface', sans-serif;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-size: 60px;
+    overflow: auto;
+    padding-bottom: 10px;
+}
+
+#main-content p {
+    text-align: justify;
+    line-height: 1.6;
+}
+
+#main-content li {
+    margin-left: 30px;
+}
+
+.small-date-text {
+    font-size: 14px;
+    font-style: italic;
+    text-align: right !important;
+}
+
+/**************************************************************************************************************************/
+
+/* MEDIA QUERIES */
+
+/**************************************************************************************************************************/
+
+@media only screen and (max-width: 767px) {
+    #sidebar {
+        position: static;
+    }
+
+    #main-content {
+        position: static;
+        padding: 10px 10px;
+    }
+}
+
+/**************************************************************************************************************************/
+
+/* DELETE LATER */
+
+/**************************************************************************************************************************/
+
+.border {
+    border: solid 1px;
+}
+
