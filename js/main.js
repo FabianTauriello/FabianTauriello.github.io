@@ -2,9 +2,9 @@
 const navbarlinks = document.getElementById('navbar').querySelectorAll('.navLink');
 
 // add event listener to all navbar links 
-for (let i = 0; i < navbarlinks.length; i++) {
-    navbarlinks[i].addEventListener('click', changeActiveNavbarLink);
-}
+// for (let i = 0; i < navbarlinks.length; i++) {
+//     navbarlinks[i].addEventListener('click', changeActiveNavbarLink(navbarlinks[i]));
+// }
 
 // create variable to store whether the mobile nav menu is displayed
 let mobileMenuIsDisplayed = false;
@@ -46,14 +46,34 @@ for (let i = 0; i < message.length; i++) {
 // cursor.classList.add('blinking-cursor');
 // cursor.firstChild.style
 
+// Change the current active navbar link when section enters frame
+window.addEventListener("scroll", function(event) {
+    let scrollPos = this.scrollY;
+    const aboutOffset = document.getElementById("about").offsetTop;
+    const projectsOffset = document.getElementById("projects").offsetTop;
+    const blogOffset = document.getElementById("blog").offsetTop;
+    const contactOffset = document.getElementById("contact").offsetTop;
+    if(scrollPos >= aboutOffset && scrollPos < projectsOffset) {
+        changeActiveNavbarLink(navbarlinks[3]);
+    } else if (scrollPos >= projectsOffset && scrollPos < blogOffset) {
+        changeActiveNavbarLink(navbarlinks[2]);
+    } else if (scrollPos >= blogOffset && scrollPos < contactOffset) {
+        changeActiveNavbarLink(navbarlinks[1]);
+    } else if (scrollPos >= contactOffset) {
+        changeActiveNavbarLink(navbarlinks[0]);
+    } else {
+        changeActiveNavbarLink(navbarlinks[4]);
+    }
+});
+
 // Change the current active navbar link
-function changeActiveNavbarLink() {
+function changeActiveNavbarLink(element) {
     // deactivate current navbar link
     for (let i = 0; i < navbarlinks.length; i++) {
         navbarlinks[i].classList.remove('active-nav-link');
     }
     // activate new navbar link
-    this.classList.add('active-nav-link');
+    element.classList.add('active-nav-link');
 }
 
 function toggleNavLinks() {
