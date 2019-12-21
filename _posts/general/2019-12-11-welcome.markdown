@@ -8,7 +8,7 @@ categories: general
 
 ---
 
-A very warm welcome to my blog. Here, I will document my progress and thoughts on various software projects as I work on them. You can expect to see projects mostly covering two technologies; embedded software and the blockchain. Eventually, I may explore other areas but initially my focus will be on these topics. 
+A very warm welcome to my blog. Here, I will document my progress and thoughts on various software projects as I work on them. You can expect to see projects covering many technologies, including, but not limited to, embedded software and the blockchain. I'm also determined to refine my skills with Java and C++. Eventually, I may explore other areas but initially my focus will be on these areas. 
 
 <br>Any blog post unrelated to a project will be placed under the “General” category in the sidebar. Otherwise, it will be placed under the “Project Updates” category in the sidebar.
 

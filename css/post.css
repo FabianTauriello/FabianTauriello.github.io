@@ -65,8 +65,16 @@
 }
 
 #sidebar-main li {
-    font-size: 13px;
+    font-size: 12px;
     margin-left: 5px;
+}
+
+#sidebar-main h5 {
+    margin-left: 2px;
+}
+
+#sidebar-main * {
+    line-height: 1.6;
 }
 
 /**************************************************************************************************************************/
@@ -103,7 +111,7 @@
     padding-bottom: 10px;
 }
 
-#main-content p {
+#main-content p, #main-content li {
     text-align: justify;
     line-height: 1.6;
 }
