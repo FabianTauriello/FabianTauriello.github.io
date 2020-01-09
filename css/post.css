@@ -116,14 +116,43 @@
     line-height: 1.6;
 }
 
+#main-content a {
+    text-decoration: none;
+}
+
+#main-content a:hover {
+    text-decoration: underline;
+}
+
 #main-content li {
     margin-left: 30px;
+}
+
+#main-content img {
+    max-width: 700px;
 }
 
 .small-date-text {
     font-size: 14px;
     font-style: italic;
     text-align: right !important;
+}
+
+pre {
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    border-left: 3px solid #f36d33;
+    color: #666;
+    page-break-inside: avoid;
+    font-family: monospace;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 1.6em;
+    max-width: 100%;
+    overflow: auto;
+    padding: 1em 1.5em;
+    display: block;
+    word-wrap: break-word;
 }
 
 /**************************************************************************************************************************/
