@@ -12,7 +12,7 @@ I discovered an article by the Loyola Maymount University that I think will be v
 
 <br>In the first iteration of the application, I'll create two classes (Client.java and Server.java). The Server class will use a ServerSocket object to listen for clients to connect and when they do, send them the current date. The Client class can be run countless times because of an infinite loop in the Server class.
 
-<br>Note, I will not include import statements in any of my blog posts because I don't think they're necessary.
+<br>Note, I will not include import statements in any of my blog posts because I don't think it's necessary.
 
 <br>Server.java
 

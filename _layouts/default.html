@@ -3,6 +3,7 @@
 
 <head>
         <title>Fabian Tauriello</title>
+        <link rel="shortcut icon" type="image/png" href="images/favicon.png">
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
                 integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
@@ -138,7 +139,7 @@
                                                 <a href="{{ post.url }}">
                                                         <h5>{{ post.title }}</h5>
                                                 </a>
-                                                <p>{{ post.excerpt | truncate: 90 }}</p>
+                                                <p>{{ post.excerpt | truncate: 65 }}</p>
                                                 <span>{{ post.date | date_to_string }}</span>
                                         </div>
                                 </div>
@@ -149,23 +150,27 @@
                                                 <a href="{{ post.url }}">
                                                         <h5>{{ post.title }}</h5>
                                                 </a>
-                                                <p>{{ post.excerpt | truncate: 90 }}</p>
+                                                <p>{{ post.excerpt | truncate: 65 }}</p>
                                                 <span>{{ post.date | date_to_string }}</span>
                                         </div>
                                 </div>
                                 {% else %}
                                 <div class="blog-card border" data-aos="fade-up">
-                                        <img class="blog-thumb-img" src="../images/welcome.jpg" alt="Blog post image">
+                                        <img class="blog-thumb-img" src="../images/hiya.jpg" alt="Blog post image">
                                         <div class="blog-post-container">
                                                 <a href="{{ post.url }}">
                                                         <h5>{{ post.title }}</h5>
                                                 </a>
-                                                <p>{{ post.excerpt | truncate: 90 }}</p>
+                                                <p>{{ post.excerpt | truncate: 65 }}</p>
                                                 <span>{{ post.date | date_to_string }}</span>
                                         </div>
                                 </div>
                                 {% endif %}
                                 {% endfor %}
+                                <div class="flex-break"></div>
+                                <a id="blog-button" data-aos="fade-up" data-aos-offset="20" class="primary-button" href="general/2019/12/11/welcome.html">
+                                        See All Posts
+                                </a>
                         </div>
                 </section>
                 <!-- BLOG SECTION END -->
