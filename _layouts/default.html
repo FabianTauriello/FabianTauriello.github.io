@@ -47,6 +47,7 @@
                 </ul>
                 <div id="mobileNavLinks">
                         <li><a href="#about" onclick="toggleNavLinks()">About</a></li>
+                        <hr>
                         <li><a href="#projects" onclick="toggleNavLinks()">Projects</a></li>
                         <hr>
                         <li><a href="#blog" onclick="toggleNavLinks()">Blog</a></li>
@@ -119,7 +120,7 @@
                         <h1 class="page-section-heading light-blue">Projects</h1>
                         <hr class="section-hr light-blue" data-aos="zoom-in">
                         <div id="projects-main-content-container" class="light-blue">
-                                <h4 class="light-blue" style="font-style: italic">...Coming Soon</h4>
+                                <p class="light-blue" style="font-style: italic;">...Coming Soon</p>
                         </div>
                 </section>
                 <!-- PROJECTS SECTION END -->
@@ -167,11 +168,13 @@
                                 </div>
                                 {% endif %}
                                 {% endfor %}
-                                <div class="flex-break"></div>
-                                <a id="blog-button" data-aos="fade-up" data-aos-offset="20" class="primary-button" href="general/2019/12/11/welcome.html">
-                                        See All Posts
-                                </a>
+
                         </div>
+                        <!-- <div class="flex-break"></div> -->
+                        <a id="blog-button" data-aos="fade-up" data-aos-offset="20" class="primary-button"
+                                href="general/2019/12/11/welcome.html">
+                                See All Posts
+                        </a>
                 </section>
                 <!-- BLOG SECTION END -->
 
@@ -180,17 +183,14 @@
                 <section id="contact-section" class="">
                         <h1 class="page-section-heading light-blue">Contact</h1>
                         <hr class="section-hr light-blue" data-aos="zoom-in">
-                        <div id="contact-main-content-container" class="">
-                                <form id="contact-form" action="https://formspree.io/ftauriello@hotmail.com"
-                                        method="POST" class="">
-                                        <input id="name-input" type="text" name="name" class="" placeholder="Name">
-                                        <input id="email-input" type="email" name="email" class="" placeholder="Email">
-                                        <textarea id="text-area-input" class="" name="comment"
-                                                placeholder="Comment"></textarea>
-                                        <button id="submit-button" type="submit" value="send"
-                                                class="primary-button">Submit</button>
-                                </form>
-                        </div>
+                        <form id="contact-form" action="https://formspree.io/ftauriello@hotmail.com" method="POST"
+                                class="">
+                                <input id="name-input" type="text" name="name" class="" placeholder="Name">
+                                <input id="email-input" type="email" name="email" class="" placeholder="Email">
+                                <textarea id="text-area-input" class="" name="comment" placeholder="Comment"></textarea>
+                                <button id="submit-button" type="submit" value="send"
+                                        class="primary-button">Submit</button>
+                        </form>
                 </section>
                 <!-- CONTACT SECTION END -->
         </main>

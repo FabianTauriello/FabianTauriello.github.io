@@ -42,7 +42,7 @@ a {
 #about, #projects, #blog, #contact {
     visibility: visible;
     display: block;
-    height: 0px;
+    height: 0;
     bottom: 50px;
     position: relative;
 }
@@ -76,10 +76,7 @@ a {
 }
 
 .page-section-heading {
-    /* border: 1px solid; */
-    font-size: 60px;
     text-align: center;
-    padding-top: 50px;
     padding-bottom: 10px;
 }
 
@@ -89,7 +86,9 @@ a {
 }
 
 .section-hr {
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
     border: 1.5px solid;
     width: 50%;
 }
@@ -118,8 +117,25 @@ li {
     list-style-type: none;
 }
 
-#about-main-content-container, #projects-main-content-container, #blog-main-content-container, #contact-main-content-container {
-    padding-bottom: 50px;
+#about-main-content-container, #projects-main-content-container, #blog-main-content-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    align-items: center;
+}
+
+#about-section, #projects-section, #blog-section, #contact-section {
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
 }
 
 /**************************************************************************************************************************/
@@ -251,9 +267,18 @@ li {
     background-color: rgb(76, 174, 79, 0.5);
 }
 
-#navbar li {
+#navLinks a {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navLinks li {
     float: right;
     height: 50px;
+    width: 8vw;
+    /* font-size: 25px; */
 }
 
 #navIcon {
@@ -268,7 +293,7 @@ li {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    height: calc(50vh - 50px);
+    height: calc(50vh - 100px);
     width: 100%;
     position: fixed;
     background-color: rgb(34, 35, 43);
@@ -277,12 +302,9 @@ li {
 }
 
 #mobileNavLinks li {
-    -webkit-box-flex: 1;
-    -ms-flex-positive: 1;
-    flex-grow: 1;
-    /* align-items: center;
-    justify-content: center; */
+    height: 25%;
     color: #66FCF1;
+    /* border: 1px solid black; */
 }
 
 #mobileNavLinks a {
@@ -322,25 +344,6 @@ li {
 
 /**************************************************************************************************************************/
 
-#about-main-content-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-flex: 1;
-    -ms-flex-positive: 1;
-    flex-grow: 1;
-}
-
 #download-CV-button {
     margin-top: 10px;
     margin-right: 0;
@@ -351,13 +354,8 @@ li {
     background-color: #1F2833;
     width: 70%;
     padding: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    -webkit-flex-basis: 350px;
-    flex-basis: 350px;
     border-radius: 10px 10px 10px 10px;
     -webkit-box-shadow: 0 4px 8px 0 #00000033;
     box-shadow: 0 4px 8px 0 #00000033;
@@ -385,7 +383,6 @@ li {
 }
 
 #profile-description {
-    /* float: left; */
     text-align: justify;
 }
 
@@ -415,14 +412,10 @@ li {
 
 #about-img {
     border-radius: 10px 0 0 10px;
-    max-width: 200px;
+    max-width: 250px;
     height: auto;
     -o-object-fit: cover;
     object-fit: cover;
-}
-
-.icon-background {
-    /* color: red; */
 }
 
 /**************************************************************************************************************************/
@@ -432,27 +425,8 @@ li {
 /**************************************************************************************************************************/
 
 #projects-section {
-    overflow: auto;
+    /* overflow: auto; */
     background-color: #1F2833;
-}
-
-#projects-main-content-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-flex: 1;
-    -ms-flex-positive: 1;
-    flex-grow: 1;
 }
 
 /**************************************************************************************************************************/
@@ -462,24 +436,6 @@ li {
 /**************************************************************************************************************************/
 
 #blog {}
-
-#blog-main-content-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-flex: 1;
-    -ms-flex-positive: 1;
-    flex-grow: 1;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    margin-top: 8px;
-}
 
 .blog-card {
     max-width: 286px;
@@ -524,7 +480,8 @@ li {
 }
 
 #blog-button {
-    margin-bottom: -25px;
+    /* margin-bottom: -25px; */
+    margin-top: 30px;
 }
 
 /**************************************************************************************************************************/
@@ -536,25 +493,6 @@ li {
 #contact-section {
     overflow: auto;
     background-color: #1F2833;
-}
-
-#contact-main-content-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-flex: 1;
-    -ms-flex-positive: 1;
-    flex-grow: 1;
 }
 
 #contact-form {
@@ -657,10 +595,15 @@ input, textarea {
 
 /**************************************************************************************************************************/
 
-@media only screen and (max-width: 767px) {
+@media (max-width:961px)  { 
+    /* smartphones, iPhone, portrait 480x320 phones */ 
+
     /* GENERAL */
-    #about-main-content-container, #projects-main-content-container, #blog-main-content-container, #contact-main-content-container {
-        margin-top: auto;
+    #about-section, #projects-section, #blog-section {
+        padding: 30px 0;
+    }
+    .section-hr {
+        margin-bottom: 30px;
     }
     /* NAVBAR */
     #background-pic-container {
@@ -670,9 +613,6 @@ input, textarea {
     #about-img {
         margin: 8% auto;
         border-radius: 0px 0px 0px 0px;
-    }
-    #about-main-content-container {
-        padding: 30px 0;
     }
     #about-first-flex-container {
         width: 85%;
@@ -693,15 +633,21 @@ input, textarea {
     }
     #navIcon {
         display: block;
+        float: right;
     }
     /* BLOG */
-    #blog-main-content-container .blog-card:nth-child(1) {
-        /* margin-right: 0; */
-        margin: 8% auto;
+    #blog-main-content-container {
+        flex-direction: column;
+        margin: 0 auto;
     }
+    #blog-main-content-container .blog-card:nth-child(1) {
+        margin-right: 0;
+        margin-bottom: 25px;
+    }
+    
     #blog-main-content-container .blog-card:nth-child(3) {
-        /* margin-left: 0; */
-        margin: 8% auto;
+        margin-left: 0;
+        margin-top: 25px;
     }
     /* CONTACT */
     #contact-form {
@@ -710,28 +656,89 @@ input, textarea {
         -ms-flex-align: center;
         align-items: center;
     }
-    #contact-main-content-container {
-        /* padding: 30px 0; */
+}
+
+@media (min-width:961px)  { 
+    /* tablet, landscape iPad, lo-res laptops and desktops */ 
+
+    /* BLOG */
+    #blog-main-content-container {
+        -webkit-box-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+    }
+
+    .page-section-heading {
+        font-size: 60px;
+    }
+}
+
+@media (min-width:1025px) { 
+    /* big landscape tablets, laptops, and desktops */ 
+
+
+}
+
+@media (min-width:1919px) { 
+    /* hi-res laptops and desktops */ 
+
+    .page-section-heading {
+        font-size: 120px;
+    }
+
+    #profile-description, #projects-main-content-container p {
+        font-size: 25px;
+    }
+
+    #about-second-flex-container li {
+        font-size: 23px;
+    }
+    
+    .navLink a {
+        font-size: 26px;
+    }
+
+    .blog-card {
+        max-width: 350px;
+        max-height: 500px;
+    }
+
+    .blog-thumb-img {
+        width: 400px;
+    }
+
+    #text-area-input {
+        height: 300px;
+    }
+
+    #about, #projects, #blog, #contact {
+        bottom: 100px;
+    }
+
+    section {
+        min-height: calc(100vh - 100px);
+    }
+
+    #navbar, #navbar li {
+        height: 100px;
+    }
+
+    .letter-wrapper {
+        height: 86px;
+        min-width: 55px;
+        margin-right: 2px;
+    }
+    
+    .span-letter {
+        font-size: 55px;
     }
 }
 
 /**************************************************************************************************************************/
 
-/**************************************************************************************************************************/
-
-/* remove later */
-
-.in-bl {
-    display: inline-block;
-}
-
-.border {
-    border: 1px solid;
-}
-
 /* THEMES */
 
-/* 12 Striking and Simple */
+/**************************************************************************************************************************/
 
 .blk {
     color: #0B0C10;
@@ -752,12 +759,3 @@ input, textarea {
 .light-grey {
     color: #45A29E
 }
-
-/* #ones {
-    position: fixed;
-    height: 50px;
-    background-color: red;
-    top: 50px;
-    right: 0;
-    left: 0;
-} */
