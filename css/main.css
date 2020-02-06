@@ -175,7 +175,6 @@ li {
 }
 
 .letter-wrapper {
-    /* border: 1px solid red; */
     position: relative;
     overflow: hidden;
     height: 56px;
@@ -278,7 +277,6 @@ li {
     float: right;
     height: 50px;
     width: 8vw;
-    /* font-size: 25px; */
 }
 
 #navIcon {
@@ -304,7 +302,6 @@ li {
 #mobileNavLinks li {
     height: 25%;
     color: #66FCF1;
-    /* border: 1px solid black; */
 }
 
 #mobileNavLinks a {
@@ -327,7 +324,6 @@ li {
     -webkit-transition: 300ms;
     -o-transition: 300ms;
     transition: 300ms;
-    /* -webkit-transition: 300ms; */
 }
 
 .closeMobileNavLinks {
@@ -335,7 +331,6 @@ li {
     -webkit-transition: 300ms;
     -o-transition: 300ms;
     transition: 300ms;
-    /* -webkit-transition: 300ms; */
 }
 
 /**************************************************************************************************************************/
@@ -425,7 +420,6 @@ li {
 /**************************************************************************************************************************/
 
 #projects-section {
-    /* overflow: auto; */
     background-color: #1F2833;
 }
 
@@ -434,8 +428,6 @@ li {
 /* BLOG SECTION */
 
 /**************************************************************************************************************************/
-
-#blog {}
 
 .blog-card {
     max-width: 286px;
@@ -480,7 +472,6 @@ li {
 }
 
 #blog-button {
-    /* margin-bottom: -25px; */
     margin-top: 30px;
 }
 
@@ -586,8 +577,6 @@ input, textarea {
 .fa-github:hover, .fa-linkedin:hover {
     color: #66fCF1;
 }
-
-/* color: #66fCF1; */
 
 /**************************************************************************************************************************/
 
@@ -744,18 +733,6 @@ input, textarea {
     color: #0B0C10;
 }
 
-.dark-grey {
-    color: #1F2833;
-}
-
-.pink {
-    color: #C5C6C7;
-}
-
 .light-blue {
     color: #66fCF1
-}
-
-.light-grey {
-    color: #45A29E
 }
