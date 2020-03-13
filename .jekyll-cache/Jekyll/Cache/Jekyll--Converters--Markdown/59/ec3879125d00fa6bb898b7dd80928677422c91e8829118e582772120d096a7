@@ -1,4 +1,4 @@
-I"¤<p>This update improves over the last version by reading data from multiple clients. To quote the source material;<br /></p>
+I"ª<p>This update improves over the last version by reading data from multiple clients. To quote the source material;<br /></p>
 
 <blockquote>
   <p>â€œWhen a client connects, the server spawns a thread, dedicated to just that client, to read, uppercase, and reply. The server can listen for and serve other clients at the same time, so we have true concurrency.â€</p>
@@ -84,7 +84,7 @@
 
 <p><br /><strong>Execution of the Server class</strong>
 <br /><img src="../../../../images/Hiya/update3-server1.png" alt="Server.java execution" />
-Here you can see that when the server is running, it waits for clients to connect. After running the Server class, I ran three instances of the Client class, before stopping one of them (port 54803), and finally starting another two.</p>
+<br />Here you can see that when the server is running, it waits for clients to connect. After running the Server class, I ran three instances of the Client class, before stopping one of them (port 54803), and finally starting another two.</p>
 
 <p><br /></p>
 <hr />

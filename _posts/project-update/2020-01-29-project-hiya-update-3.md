@@ -89,7 +89,7 @@ Here is some output from execution:
 
 <br>**Execution of the Server class**
 <br>![Server.java execution](../../../../images/Hiya/update3-server1.png)
-Here you can see that when the server is running, it waits for clients to connect. After running the Server class, I ran three instances of the Client class, before stopping one of them (port 54803), and finally starting another two.
+<br>Here you can see that when the server is running, it waits for clients to connect. After running the Server class, I ran three instances of the Client class, before stopping one of them (port 54803), and finally starting another two.
 
 <br>
 <hr>
