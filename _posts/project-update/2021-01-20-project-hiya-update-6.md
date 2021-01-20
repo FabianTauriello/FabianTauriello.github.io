@@ -23,7 +23,7 @@ A few notes about what you're about to see:
 - At this point, the story log screen opens and each "author" takes turns, writing one sentence at a time to build a fictional story. From this screen, the author can also open the story into "full-screen mode", mark the story as "done", or make changes to the story's details (e.g. title and genres/tags)
 
 <br>
-Note: videos are played at the same time to illustrate how the app updates itself in real time.
+Note: videos should be played at the same time to illustrate how the app updates itself in real time.
 <br>
 <br>
 <span style="float: left;">Fabian's phone</span> 
