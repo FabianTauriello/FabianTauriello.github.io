@@ -1,0 +1,12 @@
+I"�<p>Over the last year I’ve spent a lot of time tinkering with the Android ecosystem. I’ve built several Android apps using Kotlin, which can be found on my <a href="https://github.com/FabianTauriello/" target="_blank">GitHub account</a> (e.g “COVID-Tracker”, and “Movie Catalog”). This has allowed me to get familiar with the tools and environment, and begin working on an Android implementation of Hiya. So, as promised, that’s exactly what I did. HOWEVER, Kotlin is the recommended/supported language for Android applications according to Google so I’m afraid Java has been sidelined. Fortunately, Kotlin was quite simple to learn. I don’t find it that different from Java but it’s much better in some key areas: less boilerplate, and null safety to name a couple.</p>
+
+<p><br /></p>
+
+<video width="30%" style="border-radius: 8%;  max-width: 400px !important;" preload="" autoplay="" loop="" muted="" playsinline="">
+<source src="/videos/Pixel 3.mp4" />
+</video>
+
+<video width="30%" style="border-radius: 8%;  max-width: 400px !important;" preload="" autoplay="" loop="" muted="" playsinline="">
+<source src="/videos/Xperia.mp4" />
+</video>
+:ET
