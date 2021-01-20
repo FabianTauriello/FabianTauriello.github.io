@@ -19,7 +19,8 @@ A few notes about what you're about to see:
     - Finished: once an author is happy with the story, they can check the "tick" button in the action bar. If both authors have ticked this button, the story will be marked as "finished" and listed in this tab. Text changes can no longer occur. They can mark it as a "liked" and it will appear in the Liked tab.
     - Liked: lists all liked stories
     - Profile: allows a user to sign out.
-- After logging in, Fabian starts a story with Homer Simpson. At this point, the story log screen opens and each "author" takes turns, writing one sentence at a time to build a fictional story. From this screen, the author can also open the story into "full-screen mode", mark the story as "done", or make changes to the story's details (e.g. title and genres/tags)
+- Fabian starts a story with Homer Simpson. The list of users Fabian can choose from are determined by his phone contact list AND if they have an account with Hiya. 
+- At this point, the story log screen opens and each "author" takes turns, writing one sentence at a time to build a fictional story. From this screen, the author can also open the story into "full-screen mode", mark the story as "done", or make changes to the story's details (e.g. title and genres/tags)
 
 <br>
 Important note: play both videos at the same time to see how the app updates realtime.
