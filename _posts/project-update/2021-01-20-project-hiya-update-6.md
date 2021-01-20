@@ -23,18 +23,17 @@ A few notes about what you're about to see:
 - At this point, the story log screen opens and each "author" takes turns, writing one sentence at a time to build a fictional story. From this screen, the author can also open the story into "full-screen mode", mark the story as "done", or make changes to the story's details (e.g. title and genres/tags)
 
 <br>
-Important note: play both videos at the same time to see how the app updates realtime.
-
+Note: videos are played at the same time to illustrate how the app updates itself in real time.
 <br>
-
+<br>
 <span style="float: left;">Fabian's phone</span> 
 <span style="float: right;">Homer's phone</span>
 <br>
 <div>
-<video width="40%" style="border-radius: 8%; float: left; max-width: 560px !important;" controls>
+<video width="45%" style="border-radius: 8%; float: left; max-width: 560px !important;" loop autoplay muted controls>
   <source src="/videos/Xperia.mp4" type="video/mp4">
 </video>
-<video width="40%" style="border-radius: 8%; float: right; max-width: 560px !important;" controls>
+<video width="40%" style="border-radius: 8%; float: right; max-width: 560px !important;" loop autoplay muted controls>
   <source src="/videos/Pixel 3.mp4" type="video/mp4">
 </video>
 </div>
